@@ -61,7 +61,7 @@
             this.btnRegistion.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnRegistion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnRegistion.Location = new System.Drawing.Point(40, 223);
-            this.btnRegistion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistion.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistion.Name = "btnRegistion";
             this.btnRegistion.Size = new System.Drawing.Size(271, 28);
             this.btnRegistion.TabIndex = 1;
@@ -73,7 +73,7 @@
             // 
             this.txtUsername.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtUsername.Location = new System.Drawing.Point(40, 34);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(269, 22);
             this.txtUsername.TabIndex = 2;
@@ -83,7 +83,7 @@
             // 
             this.txtPassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtPassword.Location = new System.Drawing.Point(40, 96);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(269, 22);
             this.txtPassword.TabIndex = 4;
@@ -106,7 +106,7 @@
             // 
             this.dgv_main.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_main.Location = new System.Drawing.Point(345, 15);
-            this.dgv_main.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_main.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_main.Name = "dgv_main";
             this.dgv_main.RowHeadersWidth = 51;
             this.dgv_main.Size = new System.Drawing.Size(679, 325);
@@ -118,7 +118,7 @@
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnUpdate.Location = new System.Drawing.Point(40, 258);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(271, 28);
             this.btnUpdate.TabIndex = 6;
@@ -133,7 +133,7 @@
             this.ckShowPass.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckShowPass.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ckShowPass.Location = new System.Drawing.Point(40, 128);
-            this.ckShowPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ckShowPass.Margin = new System.Windows.Forms.Padding(4);
             this.ckShowPass.Name = "ckShowPass";
             this.ckShowPass.Size = new System.Drawing.Size(143, 25);
             this.ckShowPass.TabIndex = 7;
@@ -146,7 +146,7 @@
             this.btnRemove.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnRemove.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnRemove.Location = new System.Drawing.Point(40, 294);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(271, 28);
             this.btnRemove.TabIndex = 8;
@@ -172,8 +172,9 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnRegistion);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_UserEntry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Management";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_main)).EndInit();

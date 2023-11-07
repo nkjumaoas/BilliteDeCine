@@ -88,6 +88,30 @@
     <Compile Include="Forms\Frm_Admin_Dashboard.Designer.cs">
       <DependentUpon>Frm_Admin_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_Customer_Movie8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Customer_Movie8.Designer.cs">
+      <DependentUpon>Frm_Customer_Movie8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Customer_Movie7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Customer_Movie7.Designer.cs">
+      <DependentUpon>Frm_Customer_Movie7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Customer_Movie6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Customer_Movie6.Designer.cs">
+      <DependentUpon>Frm_Customer_Movie6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Customer_Movie5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Customer_Movie5.Designer.cs">
+      <DependentUpon>Frm_Customer_Movie5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_Customer_Movie2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +123,18 @@
     </Compile>
     <Compile Include="Forms\Frm_Customer_Movie1.Designer.cs">
       <DependentUpon>Frm_Customer_Movie1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Customer_Movie4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Customer_Movie4.Designer.cs">
+      <DependentUpon>Frm_Customer_Movie4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Customer_Movie3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Customer_Movie3.Designer.cs">
+      <DependentUpon>Frm_Customer_Movie3.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_Home.cs">
       <SubType>Form</SubType>
@@ -145,11 +181,29 @@
     <EmbeddedResource Include="Forms\Frm_Admin_Dashboard.resx">
       <DependentUpon>Frm_Admin_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Customer_Movie8.resx">
+      <DependentUpon>Frm_Customer_Movie8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Customer_Movie7.resx">
+      <DependentUpon>Frm_Customer_Movie7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Customer_Movie6.resx">
+      <DependentUpon>Frm_Customer_Movie6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Customer_Movie5.resx">
+      <DependentUpon>Frm_Customer_Movie5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Customer_Movie2.resx">
       <DependentUpon>Frm_Customer_Movie2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Customer_Movie1.resx">
       <DependentUpon>Frm_Customer_Movie1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Customer_Movie4.resx">
+      <DependentUpon>Frm_Customer_Movie4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Customer_Movie3.resx">
+      <DependentUpon>Frm_Customer_Movie3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Home.resx">
       <DependentUpon>Frm_Home.cs</DependentUpon>

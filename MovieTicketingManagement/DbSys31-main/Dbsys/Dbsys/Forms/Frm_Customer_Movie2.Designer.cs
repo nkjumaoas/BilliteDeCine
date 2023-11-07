@@ -128,9 +128,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(84, 176);
+            this.pictureBox2.Location = new System.Drawing.Point(84, 167);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(778, 557);
+            this.pictureBox2.Size = new System.Drawing.Size(709, 557);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 70;
             this.pictureBox2.TabStop = false;
@@ -141,7 +141,7 @@
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnlogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnlogin.Location = new System.Drawing.Point(989, 690);
+            this.btnlogin.Location = new System.Drawing.Point(913, 687);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(420, 63);
             this.btnlogin.TabIndex = 84;
@@ -154,7 +154,7 @@
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.Window;
-            this.label13.Location = new System.Drawing.Point(939, 557);
+            this.label13.Location = new System.Drawing.Point(863, 554);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(83, 28);
             this.label13.TabIndex = 83;
@@ -166,7 +166,7 @@
             this.label12.BackColor = System.Drawing.SystemColors.WindowText;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Window;
-            this.label12.Location = new System.Drawing.Point(939, 546);
+            this.label12.Location = new System.Drawing.Point(863, 543);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(0, 28);
             this.label12.TabIndex = 82;
@@ -177,7 +177,7 @@
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.Window;
-            this.label11.Location = new System.Drawing.Point(940, 472);
+            this.label11.Location = new System.Drawing.Point(864, 469);
             this.label11.Name = "label11";
             this.label11.Padding = new System.Windows.Forms.Padding(5);
             this.label11.Size = new System.Drawing.Size(91, 33);
@@ -188,7 +188,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(1206, 472);
+            this.pictureBox5.Location = new System.Drawing.Point(1169, 469);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(39, 33);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -199,7 +199,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1346, 472);
+            this.pictureBox4.Location = new System.Drawing.Point(1321, 469);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 33);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -212,7 +212,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.Window;
-            this.label10.Location = new System.Drawing.Point(1237, 472);
+            this.label10.Location = new System.Drawing.Point(1200, 469);
             this.label10.Name = "label10";
             this.label10.Padding = new System.Windows.Forms.Padding(5);
             this.label10.Size = new System.Drawing.Size(42, 33);
@@ -225,7 +225,7 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Window;
-            this.label9.Location = new System.Drawing.Point(1084, 472);
+            this.label9.Location = new System.Drawing.Point(1029, 469);
             this.label9.Name = "label9";
             this.label9.Padding = new System.Windows.Forms.Padding(5);
             this.label9.Size = new System.Drawing.Size(56, 33);
@@ -238,7 +238,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(1343, 472);
+            this.label8.Location = new System.Drawing.Point(1320, 469);
             this.label8.Name = "label8";
             this.label8.Padding = new System.Windows.Forms.Padding(5);
             this.label8.Size = new System.Drawing.Size(102, 33);
@@ -250,7 +250,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label7.Location = new System.Drawing.Point(940, 288);
+            this.label7.Location = new System.Drawing.Point(864, 285);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(139, 23);
             this.label7.TabIndex = 75;
@@ -261,7 +261,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Maroon;
-            this.label6.Location = new System.Drawing.Point(939, 170);
+            this.label6.Location = new System.Drawing.Point(861, 167);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 25);
             this.label6.TabIndex = 74;
@@ -273,9 +273,9 @@
             this.lblDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblDescription.Location = new System.Drawing.Point(939, 334);
+            this.lblDescription.Location = new System.Drawing.Point(863, 331);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(489, 112);
+            this.lblDescription.Size = new System.Drawing.Size(571, 112);
             this.lblDescription.TabIndex = 73;
             this.lblDescription.Text = resources.GetString("lblDescription.Text");
             // 
@@ -285,7 +285,7 @@
             this.cb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.cb1.Font = new System.Drawing.Font("Agency FB", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb1.ForeColor = System.Drawing.SystemColors.Window;
-            this.cb1.Location = new System.Drawing.Point(904, 198);
+            this.cb1.Location = new System.Drawing.Point(828, 195);
             this.cb1.Name = "cb1";
             this.cb1.Size = new System.Drawing.Size(585, 101);
             this.cb1.TabIndex = 72;
@@ -316,6 +316,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Name = "Frm_Customer_Movie2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Customer_Movie1";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

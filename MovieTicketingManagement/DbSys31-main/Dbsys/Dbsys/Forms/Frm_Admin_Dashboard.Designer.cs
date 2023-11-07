@@ -49,7 +49,7 @@
             // 
             this.dgv_main.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_main.Location = new System.Drawing.Point(51, 31);
-            this.dgv_main.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_main.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_main.Name = "dgv_main";
             this.dgv_main.RowHeadersWidth = 51;
             this.dgv_main.Size = new System.Drawing.Size(824, 401);
@@ -124,7 +124,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(909, 462);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -152,8 +152,9 @@
             this.Controls.Add(this.dgv_main);
             this.Controls.Add(this.pictureBox1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_Admin_Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Admin_Dashboard";
             this.Load += new System.EventHandler(this.Frm_Admin_Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_main)).EndInit();

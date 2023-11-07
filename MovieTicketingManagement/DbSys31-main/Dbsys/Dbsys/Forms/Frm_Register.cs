@@ -93,6 +93,9 @@ namespace Dbsys.Forms
             txtUsername.Clear();
             MessageBox.Show("Registered!");
             this.Hide();
+            Frm_Login l = new Frm_Login();
+            l.Show();
+            this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
