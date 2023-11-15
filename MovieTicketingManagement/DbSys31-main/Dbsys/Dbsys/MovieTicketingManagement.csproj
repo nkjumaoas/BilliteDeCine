@@ -88,6 +88,24 @@
     <Compile Include="Forms\Frm_Admin_Dashboard.Designer.cs">
       <DependentUpon>Frm_Admin_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_Admin_AvailableMovie .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Admin_AvailableMovie .Designer.cs">
+      <DependentUpon>Frm_Admin_AvailableMovie .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Admin_Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Admin_Sales.Designer.cs">
+      <DependentUpon>Frm_Admin_Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Customer_Purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Customer_Purchase.Designer.cs">
+      <DependentUpon>Frm_Customer_Purchase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_Customer_Movie8.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +198,15 @@
     <Compile Include="Utils\Func.cs" />
     <EmbeddedResource Include="Forms\Frm_Admin_Dashboard.resx">
       <DependentUpon>Frm_Admin_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Admin_AvailableMovie .resx">
+      <DependentUpon>Frm_Admin_AvailableMovie .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Admin_Sales.resx">
+      <DependentUpon>Frm_Admin_Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Customer_Purchase.resx">
+      <DependentUpon>Frm_Customer_Purchase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Customer_Movie8.resx">
       <DependentUpon>Frm_Customer_Movie8.cs</DependentUpon>

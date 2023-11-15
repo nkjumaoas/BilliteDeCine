@@ -147,6 +147,7 @@
             this.btnlogin.TabIndex = 84;
             this.btnlogin.Text = "BUY TICKET";
             this.btnlogin.UseVisualStyleBackColor = false;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // label13
             // 

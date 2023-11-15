@@ -72,5 +72,10 @@ namespace Dbsys.Forms
             movie8.Show();
             this.Hide();
         }
+
+        private void createUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

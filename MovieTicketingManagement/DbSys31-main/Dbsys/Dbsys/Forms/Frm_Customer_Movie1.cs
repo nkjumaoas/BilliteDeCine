@@ -23,5 +23,12 @@ namespace Dbsys.Forms
             cd.Show();
             this.Hide();
         }
+
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+            Frm_Customer_Purchase cp = new Frm_Customer_Purchase();
+            cp.Show();
+            this.Dispose();
+        }
     }
 }
