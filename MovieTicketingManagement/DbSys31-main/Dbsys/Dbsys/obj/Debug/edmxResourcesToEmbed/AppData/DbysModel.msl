@@ -10,6 +10,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_newUser" FunctionName="DBSYSModel.Store.sp_newUser" />
     <EntitySetMapping Name="UserAccount">
       <EntityTypeMapping TypeName="DBSYSModel.UserAccount">
         <MappingFragment StoreEntitySet="UserAccount">

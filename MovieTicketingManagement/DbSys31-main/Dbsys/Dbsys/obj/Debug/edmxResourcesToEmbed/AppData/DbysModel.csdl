@@ -2,6 +2,12 @@
 <Schema Namespace="DBSYSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="DBSYSEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Role" EntityType="DBSYSModel.Role" />
+    <FunctionImport Name="sp_newUser">
+      <Parameter Name="username" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+      <Parameter Name="roleId" Mode="In" Type="Int32" />
+      <Parameter Name="createdBy" Mode="In" Type="Int32" />
+    </FunctionImport>
     <EntitySet Name="UserAccount" EntityType="DBSYSModel.UserAccount" />
     <EntitySet Name="UserInformation" EntityType="DBSYSModel.UserInformation" />
     <EntitySet Name="vw_all_user_role" EntityType="DBSYSModel.vw_all_user_role" />
