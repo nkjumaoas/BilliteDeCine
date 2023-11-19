@@ -70,7 +70,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DbysModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="AppData\Movies.cs">
+      <DependentUpon>DbysModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="AppData\Role.cs">
+      <DependentUpon>DbysModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\Sales.cs">
       <DependentUpon>DbysModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AppData\UserAccount.cs">
@@ -82,11 +88,17 @@
     <Compile Include="AppData\vw_all_user_role.cs">
       <DependentUpon>DbysModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_Admin_Dashboard.cs">
+    <Compile Include="Forms\Frm_Admin_DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Admin_Dashboard.Designer.cs">
-      <DependentUpon>Frm_Admin_Dashboard.cs</DependentUpon>
+    <Compile Include="Forms\Frm_Admin_DashBoard.Designer.cs">
+      <DependentUpon>Frm_Admin_DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Admin_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Admin_Users.Designer.cs">
+      <DependentUpon>Frm_Admin_Users.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_Admin_AvailableMovie .cs">
       <SubType>Form</SubType>
@@ -196,8 +208,11 @@
     <Compile Include="UserLogged.cs" />
     <Compile Include="Utils\Constant.cs" />
     <Compile Include="Utils\Func.cs" />
-    <EmbeddedResource Include="Forms\Frm_Admin_Dashboard.resx">
-      <DependentUpon>Frm_Admin_Dashboard.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Frm_Admin_DashBoard.resx">
+      <DependentUpon>Frm_Admin_DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Admin_Users.resx">
+      <DependentUpon>Frm_Admin_Users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Admin_AvailableMovie .resx">
       <DependentUpon>Frm_Admin_AvailableMovie .cs</DependentUpon>

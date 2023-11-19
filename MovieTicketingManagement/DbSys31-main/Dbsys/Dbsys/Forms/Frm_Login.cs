@@ -59,7 +59,7 @@ namespace Dbsys
                             break;
                         case Role.Admin:
                             // Load Admin Dashboard
-                            new Frm_Admin_AvailableMovie().Show();
+                            new Frm_Admin_DashBoard().Show();
                             this.Hide();
                             break;
                         default:

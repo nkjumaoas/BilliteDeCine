@@ -15,6 +15,8 @@
       <End Role="UserAccount" EntitySet="UserAccount" />
       <End Role="UserInformation" EntitySet="UserInformation" />
     </AssociationSet>
+    <EntitySet Name="Movies" EntityType="DBSYSModel.Movies" />
+    <EntitySet Name="Sales" EntityType="DBSYSModel.Sales" />
   </EntityContainer>
   <EntityType Name="Role">
     <Key>
@@ -33,7 +35,7 @@
     <Property Name="userPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="userStatus" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="roleId" Type="Int32" />
-    <Property Name="createdBy" Type="Int32" />
+    <Property Name="createdBy" Type="String" Nullable="true" MaxLength="50" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="UserInformation" Relationship="DBSYSModel.FK__UserInfor__userI__1BFD2C07" FromRole="UserAccount" ToRole="UserInformation" />
   </EntityType>
   <EntityType Name="UserInformation">
@@ -71,4 +73,25 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="Movies">
+    <Key>
+      <PropertyRef Name="MovieNo" />
+    </Key>
+    <Property Name="MovieNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Availability" Type="Int32" />
+    <Property Name="ShowingDate" Type="DateTime" Precision="3" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Sales">
+    <Key>
+      <PropertyRef Name="TicketNo" />
+    </Key>
+    <Property Name="TicketNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Movie" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
 </Schema>

@@ -36,7 +36,7 @@ public partial class UserAccount
 
     public Nullable<int> roleId { get; set; }
 
-    public Nullable<int> createdBy { get; set; }
+    public string createdBy { get; set; }
 
 
 

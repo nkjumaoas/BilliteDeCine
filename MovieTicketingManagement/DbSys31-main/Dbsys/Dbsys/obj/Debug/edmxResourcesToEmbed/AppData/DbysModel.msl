@@ -10,7 +10,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="sp_newUser" FunctionName="DBSYSModel.Store.sp_newUser" />
     <EntitySetMapping Name="UserAccount">
       <EntityTypeMapping TypeName="DBSYSModel.UserAccount">
         <MappingFragment StoreEntitySet="UserAccount">
@@ -42,6 +41,29 @@
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="Username" ColumnName="Username" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movies">
+      <EntityTypeMapping TypeName="DBSYSModel.Movies">
+        <MappingFragment StoreEntitySet="Movies">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="ShowingDate" ColumnName="ShowingDate" />
+          <ScalarProperty Name="Availability" ColumnName="Availability" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MovieNo" ColumnName="MovieNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sales">
+      <EntityTypeMapping TypeName="DBSYSModel.Sales">
+        <MappingFragment StoreEntitySet="Sales">
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Movie" ColumnName="Movie" />
+          <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

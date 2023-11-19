@@ -35,9 +35,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpShowDate = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAvailability = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtMovieNo = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvAvailableMovie = new System.Windows.Forms.DataGridView();
             this.pbMovie = new System.Windows.Forms.PictureBox();
             this.btnUpload = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAvailableMovie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,9 +119,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtpShowDate);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtAvailability);
             this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.Controls.Add(this.txtDescription);
             this.groupBox1.Controls.Add(this.label7);
@@ -137,16 +137,16 @@
             this.groupBox1.Size = new System.Drawing.Size(745, 356);
             this.groupBox1.TabIndex = 164;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Stocks";
+            this.groupBox1.Text = "Movies";
             // 
-            // dateTimePicker1
+            // dtpShowDate
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Agency FB", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(232, 278);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(450, 29);
-            this.dateTimePicker1.TabIndex = 172;
+            this.dtpShowDate.CalendarFont = new System.Drawing.Font("Agency FB", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpShowDate.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpShowDate.Location = new System.Drawing.Point(232, 278);
+            this.dtpShowDate.Name = "dtpShowDate";
+            this.dtpShowDate.Size = new System.Drawing.Size(450, 29);
+            this.dtpShowDate.TabIndex = 172;
             // 
             // label8
             // 
@@ -160,13 +160,13 @@
             this.label8.TabIndex = 170;
             this.label8.Text = "Showing Date:";
             // 
-            // textBox3
+            // txtAvailability
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(232, 223);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(450, 32);
-            this.textBox3.TabIndex = 169;
+            this.txtAvailability.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAvailability.Location = new System.Drawing.Point(232, 223);
+            this.txtAvailability.Name = "txtAvailability";
+            this.txtAvailability.Size = new System.Drawing.Size(450, 32);
+            this.txtAvailability.TabIndex = 169;
             // 
             // txtPrice
             // 
@@ -240,15 +240,17 @@
             this.txtMovieNo.Size = new System.Drawing.Size(450, 32);
             this.txtMovieNo.TabIndex = 162;
             // 
-            // dataGridView1
+            // dgvAvailableMovie
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(713, 516);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(745, 206);
-            this.dataGridView1.TabIndex = 165;
+            this.dgvAvailableMovie.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAvailableMovie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAvailableMovie.Location = new System.Drawing.Point(713, 516);
+            this.dgvAvailableMovie.Name = "dgvAvailableMovie";
+            this.dgvAvailableMovie.RowHeadersWidth = 51;
+            this.dgvAvailableMovie.RowTemplate.Height = 24;
+            this.dgvAvailableMovie.Size = new System.Drawing.Size(745, 206);
+            this.dgvAvailableMovie.TabIndex = 165;
+            this.dgvAvailableMovie.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAvailableMovie_CellClick);
             // 
             // pbMovie
             // 
@@ -284,6 +286,7 @@
             this.btnUpdate.TabIndex = 171;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -296,6 +299,7 @@
             this.btnDelete.TabIndex = 170;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -321,15 +325,15 @@
             this.btnCancel.TabIndex = 168;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblPath
             // 
             this.lblPath.AutoSize = true;
             this.lblPath.Location = new System.Drawing.Point(166, 679);
             this.lblPath.Name = "lblPath";
-            this.lblPath.Size = new System.Drawing.Size(44, 16);
+            this.lblPath.Size = new System.Drawing.Size(0, 16);
             this.lblPath.TabIndex = 172;
-            this.lblPath.Text = "label9";
             // 
             // Frm_Admin_AvailableMovie
             // 
@@ -344,19 +348,20 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.pbMovie);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvAvailableMovie);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Name = "Frm_Admin_AvailableMovie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Customer_Movie3";
+            this.Load += new System.EventHandler(this.Frm_Admin_AvailableMovie_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAvailableMovie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMovie)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -373,13 +378,13 @@
         private System.Windows.Forms.TextBox txtMovieNo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAvailability;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dgvAvailableMovie;
+        private System.Windows.Forms.DateTimePicker dtpShowDate;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pbMovie;
         private System.Windows.Forms.Button btnUpload;

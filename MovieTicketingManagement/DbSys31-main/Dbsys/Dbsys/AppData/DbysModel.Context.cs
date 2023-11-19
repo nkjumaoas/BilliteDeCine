@@ -44,6 +44,10 @@ public partial class DBSYSEntities : DbContext
 
     public DbSet<vw_all_user_role> vw_all_user_role { get; set; }
 
+    public DbSet<Movies> Movies { get; set; }
+
+    public DbSet<Sales> Sales { get; set; }
+
 
     public virtual int sp_newUser(string username, string password, Nullable<int> roleId, Nullable<int> createdBy)
     {

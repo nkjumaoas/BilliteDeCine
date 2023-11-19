@@ -7,33 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Dbsys.AppData;
 
 namespace Dbsys.Forms
 {
-    public partial class Frm_Admin_Dashboard : Form
+    public partial class Frm_Admin_DashBoard : Form
     {
-        UserRepository userRepo;
-        public Frm_Admin_Dashboard()
+        public Frm_Admin_DashBoard()
         {
             InitializeComponent();
-            //
-            userRepo = new UserRepository();
         }
 
-        private void Frm_Admin_Dashboard_Load(object sender, EventArgs e)
+        private void btnTotalSales_Click(object sender, EventArgs e)
         {
-            dgv_main.DataSource = userRepo.AllUserRole();
-            toolStripStatusUser.Text = UserLogged.GetInstance().UserAccount.userName;
+            Frm_Admin_Sales s = new Frm_Admin_Sales();
+            s.Show();
+            this.Hide();
         }
 
-        private void createUserToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnAvailableMovie_Click(object sender, EventArgs e)
         {
-            using (var frm = new Frm_UserEntry())
-            { 
-                frm.ShowDialog();
-            }
+            Frm_Admin_AvailableMovie a = new Frm_Admin_AvailableMovie();
+            a.Show();
+            this.Hide();
         }
-
     }
 }

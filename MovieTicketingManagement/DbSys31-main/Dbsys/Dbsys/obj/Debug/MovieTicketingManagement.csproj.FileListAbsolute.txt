@@ -5,7 +5,6 @@ C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbS
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\bin\Debug\EntityFramework.xml
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\MovieTicketingManagement.csproj.AssemblyReference.cache
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\MovieTicketingManagement.csproj.SuggestedBindingRedirects.cache
-C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Admin_Dashboard.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Customer_Movie8.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Customer_Movie7.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Customer_Movie6.resources
@@ -29,3 +28,5 @@ C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbS
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Customer_Purchase.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Admin_AvailableMovie.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Admin_Sales.resources
+C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Admin_Users.resources
+C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Admin_DashBoard.resources
