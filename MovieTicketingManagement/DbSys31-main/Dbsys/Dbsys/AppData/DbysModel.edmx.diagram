@@ -5,13 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="5ba6b4505a7a4141ba9c39e83a8dbe66" Name="Diagram1">
-        <EntityTypeShape EntityType="DBSYSModel.Role" Width="1.5" PointX="0.75" PointY="4.75" />
-        <EntityTypeShape EntityType="DBSYSModel.UserAccount" Width="1.5" PointX="0.75" PointY="1" />
-        <EntityTypeShape EntityType="DBSYSModel.UserInformation" Width="1.5" PointX="3" PointY="1" />
-        <EntityTypeShape EntityType="DBSYSModel.vw_all_user_role" Width="1.5" PointX="2.875" PointY="4.75" />
+        <EntityTypeShape EntityType="DBSYSModel.Role" PointX="2.75" PointY="4.75" Width="1.5" />
+        <EntityTypeShape EntityType="DBSYSModel.UserAccount" PointX="0.75" PointY="1.25" Width="1.5" />
+        <EntityTypeShape EntityType="DBSYSModel.vw_all_user_role" PointX="0.75" PointY="4.75" Width="1.5" />
+        <EntityTypeShape EntityType="DBSYSModel.Movies" PointX="5.375" PointY="1.5" Width="1.5" />
+        <EntityTypeShape EntityType="DBSYSModel.SalesDetails" PointX="5.125" PointY="4.625" Width="1.5" />
+        <EntityTypeShape EntityType="DBSYSModel.UserInformation" PointX="3" PointY="1" Width="1.5" />
         <AssociationConnector Association="DBSYSModel.FK__UserInfor__userI__1BFD2C07" />
-        <EntityTypeShape EntityType="DBSYSModel.Movies" Width="1.5" PointX="5.5" PointY="1" />
-        <EntityTypeShape EntityType="DBSYSModel.Sales" Width="1.5" PointX="5.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

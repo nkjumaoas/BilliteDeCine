@@ -18,15 +18,21 @@ using System;
 public partial class UserInformation
 {
 
-    public int userInfoId { get; set; }
+    public int MenuNo { get; set; }
 
-    public string userInfLname { get; set; }
+    public string Description { get; set; }
 
-    public string userInfFname { get; set; }
+    public string CustomerName { get; set; }
 
-    public string userInfAddress { get; set; }
+    public Nullable<int> ContactNo { get; set; }
 
-    public string userInfEmail { get; set; }
+    public Nullable<int> EmailAddress { get; set; }
+
+    public Nullable<decimal> Price { get; set; }
+
+    public Nullable<int> Quantity { get; set; }
+
+    public Nullable<decimal> TotalSales { get; set; }
 
     public Nullable<int> userId { get; set; }
 

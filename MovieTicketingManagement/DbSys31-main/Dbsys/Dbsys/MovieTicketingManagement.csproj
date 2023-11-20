@@ -76,7 +76,7 @@
     <Compile Include="AppData\Role.cs">
       <DependentUpon>DbysModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="AppData\Sales.cs">
+    <Compile Include="AppData\SalesDetails.cs">
       <DependentUpon>DbysModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AppData\UserAccount.cs">

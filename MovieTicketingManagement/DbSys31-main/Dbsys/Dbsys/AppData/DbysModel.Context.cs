@@ -40,13 +40,13 @@ public partial class DBSYSEntities : DbContext
 
     public DbSet<UserAccount> UserAccount { get; set; }
 
-    public DbSet<UserInformation> UserInformation { get; set; }
-
     public DbSet<vw_all_user_role> vw_all_user_role { get; set; }
 
     public DbSet<Movies> Movies { get; set; }
 
-    public DbSet<Sales> Sales { get; set; }
+    public DbSet<SalesDetails> SalesDetails { get; set; }
+
+    public DbSet<UserInformation> UserInformation { get; set; }
 
 
     public virtual int sp_newUser(string username, string password, Nullable<int> roleId, Nullable<int> createdBy)
