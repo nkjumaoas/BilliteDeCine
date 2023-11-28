@@ -1,4 +1,4 @@
-﻿namespace Dbsys
+﻿namespace Dbsys.Forms
 {
     partial class Frm_Login
     {

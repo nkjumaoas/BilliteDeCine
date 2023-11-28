@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Dbsys.AppData;
 using Dbsys.Forms;
 
-namespace Dbsys
+namespace Dbsys.Forms
 {
     
     public partial class Frm_Login : Form
@@ -89,7 +89,7 @@ namespace Dbsys
             // Instantiate new object of class Frm_Register
             Frm_Register frm = new Frm_Register();
             frm.Show();
-            this.Hide();
+            this.Dispose();
 
             txtUsername.Text = frm.username;
 

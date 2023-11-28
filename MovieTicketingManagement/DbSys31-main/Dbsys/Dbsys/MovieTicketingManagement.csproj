@@ -79,6 +79,9 @@
     <Compile Include="AppData\SalesDetails.cs">
       <DependentUpon>DbysModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="AppData\SalesMaster.cs">
+      <DependentUpon>DbysModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="AppData\UserAccount.cs">
       <DependentUpon>DbysModel.tt</DependentUpon>
     </Compile>

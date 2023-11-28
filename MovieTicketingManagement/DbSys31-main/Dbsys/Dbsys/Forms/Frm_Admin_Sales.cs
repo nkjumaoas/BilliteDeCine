@@ -33,5 +33,12 @@ namespace Dbsys.Forms
         {
 
         }
+
+        private void pictureBox6_Click_1(object sender, EventArgs e)
+        {
+            Frm_Admin_DashBoard a = new Frm_Admin_DashBoard();
+            a.Show();
+            this.Dispose();
+        }
     }
 }

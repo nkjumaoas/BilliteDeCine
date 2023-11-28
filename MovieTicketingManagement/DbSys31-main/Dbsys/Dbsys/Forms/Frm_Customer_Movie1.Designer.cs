@@ -37,7 +37,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnlogin = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -48,7 +48,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
-            this.cb1 = new System.Windows.Forms.CheckBox();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblPesoSign = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -149,17 +150,17 @@
             this.btnlogin.UseVisualStyleBackColor = false;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
-            // label13
+            // lblPrice
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.Window;
-            this.label13.Location = new System.Drawing.Point(861, 554);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(83, 28);
-            this.label13.TabIndex = 83;
-            this.label13.Text = "₱369.00";
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblPrice.Location = new System.Drawing.Point(884, 565);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(71, 28);
+            this.lblPrice.TabIndex = 83;
+            this.lblPrice.Text = "369.00";
             // 
             // label12
             // 
@@ -280,18 +281,28 @@
             this.lblDescription.TabIndex = 73;
             this.lblDescription.Text = resources.GetString("lblDescription.Text");
             // 
-            // cb1
+            // lblTitle
             // 
-            this.cb1.AutoSize = true;
-            this.cb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.cb1.Font = new System.Drawing.Font("Agency FB", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb1.ForeColor = System.Drawing.SystemColors.Window;
-            this.cb1.Location = new System.Drawing.Point(826, 195);
-            this.cb1.Name = "cb1";
-            this.cb1.Size = new System.Drawing.Size(185, 101);
-            this.cb1.TabIndex = 72;
-            this.cb1.Text = "Luck";
-            this.cb1.UseVisualStyleBackColor = false;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Agency FB", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblTitle.Location = new System.Drawing.Point(848, 192);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(163, 97);
+            this.lblTitle.TabIndex = 85;
+            this.lblTitle.Text = "Luck";
+            // 
+            // lblPesoSign
+            // 
+            this.lblPesoSign.AutoSize = true;
+            this.lblPesoSign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.lblPesoSign.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPesoSign.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblPesoSign.Location = new System.Drawing.Point(867, 565);
+            this.lblPesoSign.Name = "lblPesoSign";
+            this.lblPesoSign.Size = new System.Drawing.Size(24, 28);
+            this.lblPesoSign.TabIndex = 86;
+            this.lblPesoSign.Text = "₱";
             // 
             // Frm_Customer_Movie1
             // 
@@ -299,8 +310,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1534, 833);
+            this.Controls.Add(this.lblPesoSign);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnlogin);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox5);
@@ -311,7 +324,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblDescription);
-            this.Controls.Add(this.cb1);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel2);
@@ -341,7 +353,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnlogin;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -352,6 +364,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblDescription;
-        private System.Windows.Forms.CheckBox cb1;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblPesoSign;
     }
 }

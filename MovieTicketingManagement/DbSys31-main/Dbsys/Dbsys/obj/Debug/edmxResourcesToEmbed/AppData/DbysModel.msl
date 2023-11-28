@@ -1,12 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="DBSYSModelStoreContainer" CdmEntityContainer="DBSYSEntities">
+    <EntitySetMapping Name="Movies">
+      <EntityTypeMapping TypeName="DBSYSModel.Movies">
+        <MappingFragment StoreEntitySet="Movies">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="ShowingDate" ColumnName="ShowingDate" />
+          <ScalarProperty Name="Availability" ColumnName="Availability" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MovieNo" ColumnName="MovieNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Role">
       <EntityTypeMapping TypeName="DBSYSModel.Role">
         <MappingFragment StoreEntitySet="Role">
           <ScalarProperty Name="roleDescription" ColumnName="roleDescription" />
           <ScalarProperty Name="roleName" ColumnName="roleName" />
           <ScalarProperty Name="roleId" ColumnName="roleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesDetails">
+      <EntityTypeMapping TypeName="DBSYSModel.SalesDetails">
+        <MappingFragment StoreEntitySet="SalesDetails">
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Movie" ColumnName="Movie" />
+          <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -22,6 +45,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="SalesMaster">
+      <EntityTypeMapping TypeName="DBSYSModel.SalesMaster">
+        <MappingFragment StoreEntitySet="SalesMaster">
+          <ScalarProperty Name="DateSale" ColumnName="DateSale" />
+          <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="vw_all_user_role">
       <EntityTypeMapping TypeName="DBSYSModel.vw_all_user_role">
         <MappingFragment StoreEntitySet="vw_all_user_role">
@@ -29,29 +60,6 @@
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="Username" ColumnName="Username" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Movies">
-      <EntityTypeMapping TypeName="DBSYSModel.Movies">
-        <MappingFragment StoreEntitySet="Movies">
-          <ScalarProperty Name="Image" ColumnName="Image" />
-          <ScalarProperty Name="ShowingDate" ColumnName="ShowingDate" />
-          <ScalarProperty Name="Availability" ColumnName="Availability" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="MovieNo" ColumnName="MovieNo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="SalesDetails">
-      <EntityTypeMapping TypeName="DBSYSModel.SalesDetails">
-        <MappingFragment StoreEntitySet="SalesDetails">
-          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-          <ScalarProperty Name="Movie" ColumnName="Movie" />
-          <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -66,7 +74,7 @@
           <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
           <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
           <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="MenuNo" ColumnName="MenuNo" />
+          <ScalarProperty Name="MovieNo" ColumnName="MovieNo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

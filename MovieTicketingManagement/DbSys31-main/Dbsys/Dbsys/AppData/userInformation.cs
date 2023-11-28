@@ -18,15 +18,15 @@ using System;
 public partial class UserInformation
 {
 
-    public int MenuNo { get; set; }
+    public Nullable<int> MovieNo { get; set; }
 
     public string Description { get; set; }
 
     public string CustomerName { get; set; }
 
-    public Nullable<int> ContactNo { get; set; }
+    public string ContactNo { get; set; }
 
-    public Nullable<int> EmailAddress { get; set; }
+    public string EmailAddress { get; set; }
 
     public Nullable<decimal> Price { get; set; }
 
@@ -34,7 +34,7 @@ public partial class UserInformation
 
     public Nullable<decimal> TotalSales { get; set; }
 
-    public Nullable<int> userId { get; set; }
+    public int userId { get; set; }
 
 
 

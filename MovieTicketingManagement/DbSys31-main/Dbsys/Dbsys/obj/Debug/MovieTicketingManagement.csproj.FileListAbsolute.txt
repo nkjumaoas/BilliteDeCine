@@ -18,7 +18,6 @@ C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbS
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Customer_Dashboard.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Teacher_DashBoard.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Frm_UserEntry.resources
-C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Frm_Login.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Properties.Resources.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\MovieTicketingManagement.csproj.GenerateResource.cache
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\MovieTicketingManagement.csproj.CoreCompileInputs.cache
@@ -30,3 +29,4 @@ C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbS
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Admin_Sales.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Admin_Users.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Admin_DashBoard.resources
+C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Login.resources

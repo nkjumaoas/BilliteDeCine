@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Dbsys.Forms
 {
@@ -26,8 +27,10 @@ namespace Dbsys.Forms
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
+            string movie = "1";
             Frm_Customer_Purchase cp = new Frm_Customer_Purchase();
             cp.Show();
+            cp.setValues(movie,lblTitle.Text,lblPrice.Text);
             this.Dispose();
         }
     }

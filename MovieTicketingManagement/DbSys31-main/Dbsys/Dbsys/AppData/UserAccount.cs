@@ -18,14 +18,6 @@ using System;
 public partial class UserAccount
 {
 
-    public UserAccount()
-    {
-
-        this.UserInformation = new HashSet<UserInformation>();
-
-    }
-
-
     public int userId { get; set; }
 
     public string userName { get; set; }
@@ -40,7 +32,7 @@ public partial class UserAccount
 
 
 
-    public virtual ICollection<UserInformation> UserInformation { get; set; }
+    public virtual UserInformation UserInformation { get; set; }
 
 }
 

@@ -28,6 +28,10 @@ public partial class SalesDetails
 
     public Nullable<decimal> TotalAmount { get; set; }
 
+
+
+    public virtual SalesMaster SalesMaster { get; set; }
+
 }
 
 }
