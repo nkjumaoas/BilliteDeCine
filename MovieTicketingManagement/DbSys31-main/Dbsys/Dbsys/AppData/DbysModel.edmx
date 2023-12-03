@@ -58,9 +58,10 @@ warning 6002: The table/view 'DBSYS.dbo.SalesMaster' does not have a primary key
 warning 6002: The table/view 'DBSYS.dbo.UserInformation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="UserInformation">
           <Key>
+            <PropertyRef Name="MovieNo" />
             <PropertyRef Name="userId" />
           </Key>
-          <Property Name="MovieNo" Type="int" />
+          <Property Name="MovieNo" Type="int" Nullable="false" />
           <Property Name="Description" Type="varchar" MaxLength="50" />
           <Property Name="CustomerName" Type="varchar" MaxLength="50" />
           <Property Name="ContactNo" Type="nvarchar" MaxLength="50" />
@@ -85,7 +86,7 @@ warning 6002: The table/view 'DBSYS.dbo.vw_all_user_role' does not have a primar
         </EntityType>
         <Association Name="FK__UserInfor__userI__1BFD2C07">
           <End Role="UserAccount" Type="Self.UserAccount" Multiplicity="1" />
-          <End Role="UserInformation" Type="Self.UserInformation" Multiplicity="0..1" />
+          <End Role="UserInformation" Type="Self.UserInformation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="UserAccount">
               <PropertyRef Name="userId" />
@@ -107,6 +108,26 @@ warning 6002: The table/view 'DBSYS.dbo.vw_all_user_role' does not have a primar
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="InsertUserInformation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MovieNo" Type="int" Mode="In" />
+          <Parameter Name="Description" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="CustomerName" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ContactNo" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="EmailAddress" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Price" Type="decimal" Mode="In" />
+          <Parameter Name="Quantity" Type="int" Mode="In" />
+          <Parameter Name="TotalSales" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="vw_user_information" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MovieNo" Type="int" Mode="In" />
+          <Parameter Name="Description" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="CustomerName" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ContactNo" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="EmailAddress" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Price" Type="decimal" Mode="In" />
+          <Parameter Name="Quantity" Type="int" Mode="In" />
+          <Parameter Name="TotalSales" Type="bigint" Mode="In" />
+        </Function>
         <EntityContainer Name="DBSYSModelStoreContainer">
           <EntitySet Name="Movies" EntityType="Self.Movies" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
@@ -169,11 +190,41 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
             <End Role="SalesDetails" EntitySet="SalesDetails" />
             <End Role="SalesMaster" EntitySet="SalesMaster" />
           </AssociationSet>
+          <FunctionImport Name="InsertUserInformation">
+            <Parameter Name="MovieNo" Mode="In" Type="Int32" />
+            <Parameter Name="Description" Mode="In" Type="String" />
+            <Parameter Name="CustomerName" Mode="In" Type="String" />
+            <Parameter Name="ContactNo" Mode="In" Type="String" />
+            <Parameter Name="EmailAddress" Mode="In" Type="String" />
+            <Parameter Name="Price" Mode="In" Type="Decimal" />
+            <Parameter Name="Quantity" Mode="In" Type="Int32" />
+            <Parameter Name="TotalSales" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="vw_user_information">
+            <Parameter Name="MovieNo" Mode="In" Type="Int32" />
+            <Parameter Name="Description" Mode="In" Type="String" />
+            <Parameter Name="CustomerName" Mode="In" Type="String" />
+            <Parameter Name="ContactNo" Mode="In" Type="String" />
+            <Parameter Name="EmailAddress" Mode="In" Type="String" />
+            <Parameter Name="Price" Mode="In" Type="Decimal" />
+            <Parameter Name="Quantity" Mode="In" Type="Int32" />
+            <Parameter Name="TotalSales" Mode="In" Type="Int64" />
+          </FunctionImport>
           <EntitySet Name="UserInformation" EntityType="DBSYSModel.UserInformation" />
           <AssociationSet Name="FK__UserInfor__userI__1BFD2C07" Association="DBSYSModel.FK__UserInfor__userI__1BFD2C07">
             <End Role="UserAccount" EntitySet="UserAccount" />
             <End Role="UserInformation" EntitySet="UserInformation" />
           </AssociationSet>
+          <FunctionImport Name="vw_userinformation">
+            <Parameter Name="MovieNo" Mode="In" Type="Int32" />
+            <Parameter Name="Description" Mode="In" Type="String" />
+            <Parameter Name="CustomerName" Mode="In" Type="String" />
+            <Parameter Name="ContactNo" Mode="In" Type="String" />
+            <Parameter Name="EmailAddress" Mode="In" Type="String" />
+            <Parameter Name="Price" Mode="In" Type="Decimal" />
+            <Parameter Name="Quantity" Mode="In" Type="Int32" />
+            <Parameter Name="TotalSales" Mode="In" Type="Int64" />
+          </FunctionImport>
           </EntityContainer>
         <EntityType Name="Movies">
           <Key>
@@ -250,9 +301,10 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
         </Association>
         <EntityType Name="UserInformation">
           <Key>
+            <PropertyRef Name="MovieNo" />
             <PropertyRef Name="userId" />
           </Key>
-          <Property Name="MovieNo" Type="Int32" />
+          <Property Name="MovieNo" Type="Int32" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -265,7 +317,7 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
         </EntityType>
         <Association Name="FK__UserInfor__userI__1BFD2C07">
           <End Type="DBSYSModel.UserAccount" Role="UserAccount" Multiplicity="1" />
-          <End Type="DBSYSModel.UserInformation" Role="UserInformation" Multiplicity="0..1" />
+          <End Type="DBSYSModel.UserInformation" Role="UserInformation" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="UserAccount">
               <PropertyRef Name="userId" />
@@ -343,6 +395,8 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="InsertUserInformation" FunctionName="DBSYSModel.Store.InsertUserInformation" />
+          <FunctionImportMapping FunctionImportName="vw_user_information" FunctionName="DBSYSModel.Store.vw_user_information" />
           <EntitySetMapping Name="UserInformation">
             <EntityTypeMapping TypeName="DBSYSModel.UserInformation">
               <MappingFragment StoreEntitySet="UserInformation">
@@ -358,6 +412,7 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="vw_userinformation" FunctionName="DBSYSModel.Store.vw_user_information" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

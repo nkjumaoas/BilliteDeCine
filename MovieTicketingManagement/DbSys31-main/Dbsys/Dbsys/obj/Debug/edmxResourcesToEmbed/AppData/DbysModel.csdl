@@ -17,11 +17,41 @@
       <End Role="SalesDetails" EntitySet="SalesDetails" />
       <End Role="SalesMaster" EntitySet="SalesMaster" />
     </AssociationSet>
+    <FunctionImport Name="InsertUserInformation">
+      <Parameter Name="MovieNo" Mode="In" Type="Int32" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+      <Parameter Name="CustomerName" Mode="In" Type="String" />
+      <Parameter Name="ContactNo" Mode="In" Type="String" />
+      <Parameter Name="EmailAddress" Mode="In" Type="String" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="TotalSales" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="vw_user_information">
+      <Parameter Name="MovieNo" Mode="In" Type="Int32" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+      <Parameter Name="CustomerName" Mode="In" Type="String" />
+      <Parameter Name="ContactNo" Mode="In" Type="String" />
+      <Parameter Name="EmailAddress" Mode="In" Type="String" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="TotalSales" Mode="In" Type="Int64" />
+    </FunctionImport>
     <EntitySet Name="UserInformation" EntityType="DBSYSModel.UserInformation" />
     <AssociationSet Name="FK__UserInfor__userI__1BFD2C07" Association="DBSYSModel.FK__UserInfor__userI__1BFD2C07">
       <End Role="UserAccount" EntitySet="UserAccount" />
       <End Role="UserInformation" EntitySet="UserInformation" />
     </AssociationSet>
+    <FunctionImport Name="vw_userinformation">
+      <Parameter Name="MovieNo" Mode="In" Type="Int32" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+      <Parameter Name="CustomerName" Mode="In" Type="String" />
+      <Parameter Name="ContactNo" Mode="In" Type="String" />
+      <Parameter Name="EmailAddress" Mode="In" Type="String" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="TotalSales" Mode="In" Type="Int64" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="Movies">
     <Key>
@@ -98,9 +128,10 @@
   </Association>
   <EntityType Name="UserInformation">
     <Key>
+      <PropertyRef Name="MovieNo" />
       <PropertyRef Name="userId" />
     </Key>
-    <Property Name="MovieNo" Type="Int32" />
+    <Property Name="MovieNo" Type="Int32" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -113,7 +144,7 @@
   </EntityType>
   <Association Name="FK__UserInfor__userI__1BFD2C07">
     <End Type="DBSYSModel.UserAccount" Role="UserAccount" Multiplicity="1" />
-    <End Type="DBSYSModel.UserInformation" Role="UserInformation" Multiplicity="0..1" />
+    <End Type="DBSYSModel.UserInformation" Role="UserInformation" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="UserAccount">
         <PropertyRef Name="userId" />

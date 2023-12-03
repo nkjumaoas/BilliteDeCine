@@ -26,7 +26,21 @@ namespace Dbsys.Forms
 
         private void btnAvailableMovie_Click(object sender, EventArgs e)
         {
-            Frm_Admin_AvailableMovie a = new Frm_Admin_AvailableMovie();
+            Frm_Admin_AddMovie a = new Frm_Admin_AddMovie();
+            a.Show();
+            this.Hide();
+        }
+
+        private void btnMovies_Click(object sender, EventArgs e)
+        {
+            Frm_Customer_Dashboard c = new Frm_Customer_Dashboard();
+            c.Show();   
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Frm_UserAccount a = new Frm_UserAccount();
             a.Show();
             this.Hide();
         }

@@ -54,6 +54,7 @@
             this.dgv_main.RowHeadersWidth = 51;
             this.dgv_main.Size = new System.Drawing.Size(824, 401);
             this.dgv_main.TabIndex = 0;
+            this.dgv_main.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_main_CellContentClick);
             // 
             // statusStrip1
             // 
@@ -141,7 +142,7 @@
             this.statusStrip2.TabIndex = 2;
             this.statusStrip2.Text = "statusStrip2";
             // 
-            // Frm_Admin_Dashboard
+            // Frm_Admin_Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -153,7 +154,7 @@
             this.Controls.Add(this.pictureBox1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Frm_Admin_Dashboard";
+            this.Name = "Frm_Admin_Users";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Admin_Dashboard";
             this.Load += new System.EventHandler(this.Frm_Admin_Dashboard_Load);

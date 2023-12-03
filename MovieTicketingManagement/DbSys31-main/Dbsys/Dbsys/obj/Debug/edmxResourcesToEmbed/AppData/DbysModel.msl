@@ -63,6 +63,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="InsertUserInformation" FunctionName="DBSYSModel.Store.InsertUserInformation" />
+    <FunctionImportMapping FunctionImportName="vw_user_information" FunctionName="DBSYSModel.Store.vw_user_information" />
     <EntitySetMapping Name="UserInformation">
       <EntityTypeMapping TypeName="DBSYSModel.UserInformation">
         <MappingFragment StoreEntitySet="UserInformation">
@@ -78,5 +80,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="vw_userinformation" FunctionName="DBSYSModel.Store.vw_user_information" />
   </EntityContainerMapping>
 </Mapping>

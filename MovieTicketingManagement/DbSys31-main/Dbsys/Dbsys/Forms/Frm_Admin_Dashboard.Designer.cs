@@ -36,6 +36,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAvailableMovie = new System.Windows.Forms.Button();
             this.btnTotalSales = new System.Windows.Forms.Button();
+            this.btnMovies = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -98,17 +100,20 @@
             // 
             // btnAvailableMovie
             // 
+            this.btnAvailableMovie.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAvailableMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAvailableMovie.Location = new System.Drawing.Point(597, 445);
+            this.btnAvailableMovie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAvailableMovie.Location = new System.Drawing.Point(597, 438);
             this.btnAvailableMovie.Name = "btnAvailableMovie";
             this.btnAvailableMovie.Size = new System.Drawing.Size(335, 60);
             this.btnAvailableMovie.TabIndex = 88;
-            this.btnAvailableMovie.Text = "Available Movie";
+            this.btnAvailableMovie.Text = "ADD MOVIES";
             this.btnAvailableMovie.UseVisualStyleBackColor = true;
             this.btnAvailableMovie.Click += new System.EventHandler(this.btnAvailableMovie_Click);
             // 
             // btnTotalSales
             // 
+            this.btnTotalSales.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnTotalSales.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTotalSales.Location = new System.Drawing.Point(597, 341);
             this.btnTotalSales.Name = "btnTotalSales";
@@ -118,19 +123,45 @@
             this.btnTotalSales.UseVisualStyleBackColor = true;
             this.btnTotalSales.Click += new System.EventHandler(this.btnTotalSales_Click);
             // 
+            // btnMovies
+            // 
+            this.btnMovies.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnMovies.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMovies.Location = new System.Drawing.Point(597, 235);
+            this.btnMovies.Name = "btnMovies";
+            this.btnMovies.Size = new System.Drawing.Size(335, 58);
+            this.btnMovies.TabIndex = 89;
+            this.btnMovies.Text = "MOVIES";
+            this.btnMovies.UseVisualStyleBackColor = true;
+            this.btnMovies.Click += new System.EventHandler(this.btnMovies_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(597, 540);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(335, 59);
+            this.button1.TabIndex = 90;
+            this.button1.Text = "USER";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Frm_Admin_DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1534, 833);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnMovies);
             this.Controls.Add(this.btnAvailableMovie);
             this.Controls.Add(this.btnTotalSales);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Name = "Frm_Admin_DashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_Customer_Movie3";
+            this.Text = "Frm_Admin_DashBoard";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -147,5 +178,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAvailableMovie;
         private System.Windows.Forms.Button btnTotalSales;
+        private System.Windows.Forms.Button btnMovies;
+        private System.Windows.Forms.Button button1;
     }
 }

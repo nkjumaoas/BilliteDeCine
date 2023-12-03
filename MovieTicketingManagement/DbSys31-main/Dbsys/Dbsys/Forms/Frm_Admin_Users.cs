@@ -35,5 +35,9 @@ namespace Dbsys.Forms
             }
         }
 
+        private void dgv_main_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

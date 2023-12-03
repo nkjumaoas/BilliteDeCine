@@ -97,17 +97,23 @@
     <Compile Include="Forms\Frm_Admin_DashBoard.Designer.cs">
       <DependentUpon>Frm_Admin_DashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_UserAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_UserAccount.Designer.cs">
+      <DependentUpon>Frm_UserAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_Admin_Users.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Frm_Admin_Users.Designer.cs">
       <DependentUpon>Frm_Admin_Users.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_Admin_AvailableMovie .cs">
+    <Compile Include="Forms\Frm_Admin_AddMovie .cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Admin_AvailableMovie .Designer.cs">
-      <DependentUpon>Frm_Admin_AvailableMovie .cs</DependentUpon>
+    <Compile Include="Forms\Frm_Admin_AddMovie .Designer.cs">
+      <DependentUpon>Frm_Admin_AddMovie .cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_Admin_Sales.cs">
       <SubType>Form</SubType>
@@ -208,17 +214,21 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="TicketManager.cs" />
     <Compile Include="UserLogged.cs" />
     <Compile Include="Utils\Constant.cs" />
     <Compile Include="Utils\Func.cs" />
     <EmbeddedResource Include="Forms\Frm_Admin_DashBoard.resx">
       <DependentUpon>Frm_Admin_DashBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_UserAccount.resx">
+      <DependentUpon>Frm_UserAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Admin_Users.resx">
       <DependentUpon>Frm_Admin_Users.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_Admin_AvailableMovie .resx">
-      <DependentUpon>Frm_Admin_AvailableMovie .cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Frm_Admin_AddMovie .resx">
+      <DependentUpon>Frm_Admin_AddMovie .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Admin_Sales.resx">
       <DependentUpon>Frm_Admin_Sales.cs</DependentUpon>

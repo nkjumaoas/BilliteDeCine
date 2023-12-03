@@ -89,7 +89,7 @@ namespace Dbsys.Forms
             // Instantiate new object of class Frm_Register
             Frm_Register frm = new Frm_Register();
             frm.Show();
-            this.Dispose();
+            this.Hide();
 
             txtUsername.Text = frm.username;
 

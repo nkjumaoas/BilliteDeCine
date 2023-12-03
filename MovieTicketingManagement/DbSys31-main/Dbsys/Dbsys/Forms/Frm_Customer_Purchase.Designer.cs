@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Customer_Purchase));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -36,28 +38,32 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvUserInformation = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtTotalSales = new System.Windows.Forms.TextBox();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.txtEmailAddress = new System.Windows.Forms.TextBox();
-            this.txtContactNumber = new System.Windows.Forms.TextBox();
-            this.txtCustomerName = new System.Windows.Forms.TextBox();
-            this.txtDescription = new System.Windows.Forms.TextBox();
-            this.txtMovieNo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.MovieNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.lblTotalSales = new System.Windows.Forms.Label();
+            this.nupQuantity = new System.Windows.Forms.NumericUpDown();
+            this.lblMovieNo = new System.Windows.Forms.Label();
+            this.lblMovieTitle = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserInformation)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -118,106 +124,61 @@
             // 
             // dgvUserInformation
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUserInformation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvUserInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUserInformation.Location = new System.Drawing.Point(757, 163);
+            this.dgvUserInformation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MovieNo,
+            this.Description,
+            this.Price,
+            this.Quantity,
+            this.TotalSales,
+            this.delete});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUserInformation.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvUserInformation.Location = new System.Drawing.Point(665, 166);
             this.dgvUserInformation.Name = "dgvUserInformation";
             this.dgvUserInformation.RowHeadersWidth = 51;
             this.dgvUserInformation.RowTemplate.Height = 24;
-            this.dgvUserInformation.Size = new System.Drawing.Size(723, 221);
+            this.dgvUserInformation.Size = new System.Drawing.Size(801, 219);
             this.dgvUserInformation.TabIndex = 88;
+            this.dgvUserInformation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUserInformation_CellContentClick);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.groupBox1.Controls.Add(this.txtTotalSales);
-            this.groupBox1.Controls.Add(this.txtQuantity);
-            this.groupBox1.Controls.Add(this.txtPrice);
-            this.groupBox1.Controls.Add(this.txtEmailAddress);
-            this.groupBox1.Controls.Add(this.txtContactNumber);
-            this.groupBox1.Controls.Add(this.txtCustomerName);
-            this.groupBox1.Controls.Add(this.txtDescription);
-            this.groupBox1.Controls.Add(this.txtMovieNo);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lblPrice);
+            this.groupBox1.Controls.Add(this.lblMovieTitle);
+            this.groupBox1.Controls.Add(this.lblMovieNo);
+            this.groupBox1.Controls.Add(this.nupQuantity);
+            this.groupBox1.Controls.Add(this.lblTotalSales);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.btnSave);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Font = new System.Drawing.Font("Berlin Sans FB", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Maroon;
             this.groupBox1.Location = new System.Drawing.Point(48, 137);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(630, 646);
+            this.groupBox1.Size = new System.Drawing.Size(564, 531);
             this.groupBox1.TabIndex = 90;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Purchase";
-            // 
-            // txtTotalSales
-            // 
-            this.txtTotalSales.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalSales.Location = new System.Drawing.Point(265, 483);
-            this.txtTotalSales.Name = "txtTotalSales";
-            this.txtTotalSales.Size = new System.Drawing.Size(317, 32);
-            this.txtTotalSales.TabIndex = 166;
-            // 
-            // txtQuantity
-            // 
-            this.txtQuantity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.Location = new System.Drawing.Point(265, 424);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(317, 32);
-            this.txtQuantity.TabIndex = 165;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(265, 371);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(317, 32);
-            this.txtPrice.TabIndex = 164;
-            // 
-            // txtEmailAddress
-            // 
-            this.txtEmailAddress.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailAddress.Location = new System.Drawing.Point(265, 314);
-            this.txtEmailAddress.Name = "txtEmailAddress";
-            this.txtEmailAddress.Size = new System.Drawing.Size(317, 32);
-            this.txtEmailAddress.TabIndex = 163;
-            // 
-            // txtContactNumber
-            // 
-            this.txtContactNumber.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactNumber.Location = new System.Drawing.Point(265, 259);
-            this.txtContactNumber.Name = "txtContactNumber";
-            this.txtContactNumber.Size = new System.Drawing.Size(317, 32);
-            this.txtContactNumber.TabIndex = 161;
-            // 
-            // txtCustomerName
-            // 
-            this.txtCustomerName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.Location = new System.Drawing.Point(265, 207);
-            this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(317, 32);
-            this.txtCustomerName.TabIndex = 160;
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(265, 155);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(317, 32);
-            this.txtDescription.TabIndex = 159;
-            // 
-            // txtMovieNo
-            // 
-            this.txtMovieNo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMovieNo.Location = new System.Drawing.Point(265, 100);
-            this.txtMovieNo.Name = "txtMovieNo";
-            this.txtMovieNo.Size = new System.Drawing.Size(317, 32);
-            this.txtMovieNo.TabIndex = 158;
             // 
             // label10
             // 
@@ -225,7 +186,7 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(58, 109);
+            this.label10.Location = new System.Drawing.Point(58, 76);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(108, 23);
             this.label10.TabIndex = 153;
@@ -236,7 +197,7 @@
             this.btnSave.BackColor = System.Drawing.Color.Maroon;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSave.Location = new System.Drawing.Point(455, 578);
+            this.btnSave.Location = new System.Drawing.Point(391, 436);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(127, 48);
             this.btnSave.TabIndex = 127;
@@ -244,37 +205,13 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(58, 216);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 23);
-            this.label3.TabIndex = 131;
-            this.label3.Text = "Customer Name:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(58, 268);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 23);
-            this.label6.TabIndex = 132;
-            this.label6.Text = "Contact Number:";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label14.Location = new System.Drawing.Point(58, 433);
+            this.label14.Location = new System.Drawing.Point(58, 307);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(98, 23);
             this.label14.TabIndex = 156;
@@ -286,23 +223,11 @@
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label13.Location = new System.Drawing.Point(58, 380);
+            this.label13.Location = new System.Drawing.Point(58, 254);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(62, 23);
             this.label13.TabIndex = 155;
             this.label13.Text = "Price:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(58, 323);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(151, 23);
-            this.label8.TabIndex = 134;
-            this.label8.Text = "Email Address:";
             // 
             // label9
             // 
@@ -310,7 +235,7 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Location = new System.Drawing.Point(58, 492);
+            this.label9.Location = new System.Drawing.Point(58, 371);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(118, 23);
             this.label9.TabIndex = 135;
@@ -322,20 +247,155 @@
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label11.Location = new System.Drawing.Point(58, 164);
+            this.label11.Location = new System.Drawing.Point(58, 131);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(122, 23);
+            this.label11.Size = new System.Drawing.Size(116, 23);
             this.label11.TabIndex = 145;
-            this.label11.Text = "Description:";
+            this.label11.Text = "Movie Title:";
             // 
-            // panel1
+            // MovieNo
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel1.Location = new System.Drawing.Point(757, 512);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(723, 271);
-            this.panel1.TabIndex = 91;
+            this.MovieNo.HeaderText = "MovieNo";
+            this.MovieNo.MinimumWidth = 6;
+            this.MovieNo.Name = "MovieNo";
+            this.MovieNo.Width = 125;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Movie Title";
+            this.Description.MinimumWidth = 6;
+            this.Description.Name = "Description";
+            this.Description.Width = 125;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            this.Price.Width = 125;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 125;
+            // 
+            // TotalSales
+            // 
+            this.TotalSales.HeaderText = "Total Sales";
+            this.TotalSales.MinimumWidth = 6;
+            this.TotalSales.Name = "TotalSales";
+            this.TotalSales.Width = 125;
+            // 
+            // delete
+            // 
+            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delete.HeaderText = "Cancel";
+            this.delete.MinimumWidth = 6;
+            this.delete.Name = "delete";
+            this.delete.Text = "X";
+            this.delete.UseColumnTextForButtonValue = true;
+            this.delete.Width = 125;
+            // 
+            // lblTotalSales
+            // 
+            this.lblTotalSales.AutoSize = true;
+            this.lblTotalSales.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalSales.ForeColor = System.Drawing.Color.White;
+            this.lblTotalSales.Location = new System.Drawing.Point(239, 371);
+            this.lblTotalSales.Name = "lblTotalSales";
+            this.lblTotalSales.Size = new System.Drawing.Size(0, 23);
+            this.lblTotalSales.TabIndex = 167;
+            // 
+            // nupQuantity
+            // 
+            this.nupQuantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.nupQuantity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nupQuantity.ForeColor = System.Drawing.SystemColors.Menu;
+            this.nupQuantity.Location = new System.Drawing.Point(243, 298);
+            this.nupQuantity.Name = "nupQuantity";
+            this.nupQuantity.Size = new System.Drawing.Size(62, 32);
+            this.nupQuantity.TabIndex = 168;
+            this.nupQuantity.ValueChanged += new System.EventHandler(this.nupQuantity_ValueChanged);
+            // 
+            // lblMovieNo
+            // 
+            this.lblMovieNo.AutoSize = true;
+            this.lblMovieNo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMovieNo.ForeColor = System.Drawing.Color.White;
+            this.lblMovieNo.Location = new System.Drawing.Point(235, 76);
+            this.lblMovieNo.Name = "lblMovieNo";
+            this.lblMovieNo.Size = new System.Drawing.Size(0, 23);
+            this.lblMovieNo.TabIndex = 169;
+            // 
+            // lblMovieTitle
+            // 
+            this.lblMovieTitle.AutoSize = true;
+            this.lblMovieTitle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMovieTitle.ForeColor = System.Drawing.Color.White;
+            this.lblMovieTitle.Location = new System.Drawing.Point(235, 131);
+            this.lblMovieTitle.Name = "lblMovieTitle";
+            this.lblMovieTitle.Size = new System.Drawing.Size(0, 23);
+            this.lblMovieTitle.TabIndex = 170;
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.White;
+            this.lblPrice.Location = new System.Drawing.Point(239, 254);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(0, 23);
+            this.lblPrice.TabIndex = 171;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(60, 191);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 23);
+            this.label2.TabIndex = 172;
+            this.label2.Text = "Showing Date:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.Window;
+            this.label15.Location = new System.Drawing.Point(672, 536);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(192, 23);
+            this.label15.TabIndex = 162;
+            this.label15.Text = "Total Amount Due:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(673, 589);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(165, 23);
+            this.label3.TabIndex = 160;
+            this.label3.Text = "Cash Received:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.Window;
+            this.label12.Location = new System.Drawing.Point(673, 645);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(95, 23);
+            this.label12.TabIndex = 161;
+            this.label12.Text = "Change:";
             // 
             // Frm_Customer_Purchase
             // 
@@ -343,11 +403,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1534, 833);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dgvUserInformation);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvUserInformation);
             this.Name = "Frm_Customer_Purchase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Customer_Movie3";
@@ -358,6 +420,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserInformation)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,23 +434,26 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvUserInformation;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtTotalSales;
-        private System.Windows.Forms.TextBox txtQuantity;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.TextBox txtEmailAddress;
-        private System.Windows.Forms.TextBox txtContactNumber;
-        private System.Windows.Forms.TextBox txtCustomerName;
-        private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.TextBox txtMovieNo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MovieNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalSales;
+        private System.Windows.Forms.DataGridViewButtonColumn delete;
+        private System.Windows.Forms.Label lblTotalSales;
+        private System.Windows.Forms.NumericUpDown nupQuantity;
+        private System.Windows.Forms.Label lblMovieNo;
+        private System.Windows.Forms.Label lblMovieTitle;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label12;
     }
 }

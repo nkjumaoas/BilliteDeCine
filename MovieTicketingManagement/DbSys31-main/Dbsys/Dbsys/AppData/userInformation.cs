@@ -18,7 +18,7 @@ using System;
 public partial class UserInformation
 {
 
-    public Nullable<int> MovieNo { get; set; }
+    public int MovieNo { get; set; }
 
     public string Description { get; set; }
 

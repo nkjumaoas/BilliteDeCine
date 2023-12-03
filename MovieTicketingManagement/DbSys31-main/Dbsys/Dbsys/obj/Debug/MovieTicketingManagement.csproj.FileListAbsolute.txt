@@ -25,8 +25,9 @@ C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbS
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.exe
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.pdb
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Customer_Purchase.resources
-C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Admin_AvailableMovie.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Admin_Sales.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Admin_Users.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Admin_DashBoard.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Login.resources
+C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_UserAccount.resources
+C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Admin_AddMovie.resources
