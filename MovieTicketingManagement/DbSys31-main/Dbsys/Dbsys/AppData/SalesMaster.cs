@@ -22,10 +22,6 @@ public partial class SalesMaster
 
     public Nullable<System.DateTime> DateSale { get; set; }
 
-
-
-    public virtual SalesDetails SalesDetails { get; set; }
-
 }
 
 }

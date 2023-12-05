@@ -7,16 +7,9 @@
       <Parameter Name="roleId" Mode="In" Type="Int32" />
       <Parameter Name="createdBy" Mode="In" Type="Int32" />
     </FunctionImport>
-    <EntitySet Name="Movies" EntityType="DBSYSModel.Movies" />
     <EntitySet Name="Role" EntityType="DBSYSModel.Role" />
-    <EntitySet Name="SalesDetails" EntityType="DBSYSModel.SalesDetails" />
     <EntitySet Name="UserAccount" EntityType="DBSYSModel.UserAccount" />
-    <EntitySet Name="SalesMaster" EntityType="DBSYSModel.SalesMaster" />
     <EntitySet Name="vw_all_user_role" EntityType="DBSYSModel.vw_all_user_role" />
-    <AssociationSet Name="FK_SalesMaster_SalesDetails" Association="DBSYSModel.FK_SalesMaster_SalesDetails">
-      <End Role="SalesDetails" EntitySet="SalesDetails" />
-      <End Role="SalesMaster" EntitySet="SalesMaster" />
-    </AssociationSet>
     <FunctionImport Name="InsertUserInformation">
       <Parameter Name="MovieNo" Mode="In" Type="Int32" />
       <Parameter Name="Description" Mode="In" Type="String" />
@@ -37,11 +30,6 @@
       <Parameter Name="Quantity" Mode="In" Type="Int32" />
       <Parameter Name="TotalSales" Mode="In" Type="Int64" />
     </FunctionImport>
-    <EntitySet Name="UserInformation" EntityType="DBSYSModel.UserInformation" />
-    <AssociationSet Name="FK__UserInfor__userI__1BFD2C07" Association="DBSYSModel.FK__UserInfor__userI__1BFD2C07">
-      <End Role="UserAccount" EntitySet="UserAccount" />
-      <End Role="UserInformation" EntitySet="UserInformation" />
-    </AssociationSet>
     <FunctionImport Name="vw_userinformation">
       <Parameter Name="MovieNo" Mode="In" Type="Int32" />
       <Parameter Name="Description" Mode="In" Type="String" />
@@ -52,18 +40,18 @@
       <Parameter Name="Quantity" Mode="In" Type="Int32" />
       <Parameter Name="TotalSales" Mode="In" Type="Int64" />
     </FunctionImport>
+    <EntitySet Name="Movies" EntityType="DBSYSModel.Movies" />
+    <EntitySet Name="Ticket" EntityType="DBSYSModel.Ticket" />
+    <EntitySet Name="SalesMaster" EntityType="DBSYSModel.SalesMaster" />
+    <EntitySet Name="SalesDetails" EntityType="DBSYSModel.SalesDetails" />
+    <FunctionImport Name="InsertSalesDetails">
+      <Parameter Name="Movie" Mode="In" Type="Int32" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TotalAmount" Mode="In" Type="Decimal" />
+      <Parameter Name="TicketNo" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
-  <EntityType Name="Movies">
-    <Key>
-      <PropertyRef Name="MovieNo" />
-    </Key>
-    <Property Name="MovieNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="Availability" Type="Int32" />
-    <Property Name="ShowingDate" Type="DateTime" Precision="3" />
-    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-  </EntityType>
   <EntityType Name="Role">
     <Key>
       <PropertyRef Name="roleId" />
@@ -71,17 +59,6 @@
     <Property Name="roleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="roleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="roleDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="SalesDetails">
-    <Key>
-      <PropertyRef Name="TicketNo" />
-    </Key>
-    <Property Name="TicketNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Movie" Type="Int32" />
-    <Property Name="Quantity" Type="Int32" />
-    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
-    <NavigationProperty Name="SalesMaster" Relationship="DBSYSModel.FK_SalesMaster_SalesDetails" FromRole="SalesDetails" ToRole="SalesMaster" />
   </EntityType>
   <EntityType Name="UserAccount">
     <Key>
@@ -93,15 +70,6 @@
     <Property Name="userStatus" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="roleId" Type="Int32" />
     <Property Name="createdBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="UserInformation" Relationship="DBSYSModel.FK__UserInfor__userI__1BFD2C07" FromRole="UserAccount" ToRole="UserInformation" />
-  </EntityType>
-  <EntityType Name="SalesMaster">
-    <Key>
-      <PropertyRef Name="TicketNo" />
-    </Key>
-    <Property Name="TicketNo" Type="Int32" Nullable="false" />
-    <Property Name="DateSale" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="SalesDetails" Relationship="DBSYSModel.FK_SalesMaster_SalesDetails" FromRole="SalesMaster" ToRole="SalesDetails" />
   </EntityType>
   <EntityType Name="vw_all_user_role">
     <Key>
@@ -114,44 +82,42 @@
     <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
-  <Association Name="FK_SalesMaster_SalesDetails">
-    <End Type="DBSYSModel.SalesDetails" Role="SalesDetails" Multiplicity="1" />
-    <End Type="DBSYSModel.SalesMaster" Role="SalesMaster" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="SalesDetails">
-        <PropertyRef Name="TicketNo" />
-      </Principal>
-      <Dependent Role="SalesMaster">
-        <PropertyRef Name="TicketNo" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityType Name="UserInformation">
+  <EntityType Name="Movies">
     <Key>
       <PropertyRef Name="MovieNo" />
-      <PropertyRef Name="userId" />
     </Key>
-    <Property Name="MovieNo" Type="Int32" Nullable="false" />
-    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="ContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MovieNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MovieTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="Quantity" Type="Int32" />
-    <Property Name="TotalSales" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="userId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="UserAccount" Relationship="DBSYSModel.FK__UserInfor__userI__1BFD2C07" FromRole="UserInformation" ToRole="UserAccount" />
+    <Property Name="Availability" Type="Int32" />
+    <Property Name="ShowingDate" Type="DateTime" Precision="3" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
-  <Association Name="FK__UserInfor__userI__1BFD2C07">
-    <End Type="DBSYSModel.UserAccount" Role="UserAccount" Multiplicity="1" />
-    <End Type="DBSYSModel.UserInformation" Role="UserInformation" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="UserAccount">
-        <PropertyRef Name="userId" />
-      </Principal>
-      <Dependent Role="UserInformation">
-        <PropertyRef Name="userId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
+  <EntityType Name="Ticket">
+    <Key>
+      <PropertyRef Name="TicketNo" />
+    </Key>
+    <Property Name="TicketNo" Type="Int32" Nullable="false" />
+    <Property Name="MovieTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShowingDate" Type="DateTime" Precision="3" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="SalesMaster">
+    <Key>
+      <PropertyRef Name="TicketNo" />
+    </Key>
+    <Property Name="TicketNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateSale" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SalesDetails">
+    <Key>
+      <PropertyRef Name="TicketNo" />
+    </Key>
+    <Property Name="TicketNo" Type="Int32" Nullable="false" />
+    <Property Name="Movie" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
 </Schema>

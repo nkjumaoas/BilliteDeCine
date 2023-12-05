@@ -31,3 +31,4 @@ C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbS
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Login.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_UserAccount.resources
 C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Frm_Admin_AddMovie.resources
+C:\Users\Nicole Kate\Documents\GitHub\BilliteDeCine\MovieTicketingManagement\DbSys31-main\Dbsys\Dbsys\obj\Debug\Dbsys.Forms.Receipt.resources

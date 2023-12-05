@@ -82,10 +82,10 @@
     <Compile Include="AppData\SalesMaster.cs">
       <DependentUpon>DbysModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="AppData\UserAccount.cs">
+    <Compile Include="AppData\Ticket.cs">
       <DependentUpon>DbysModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="AppData\UserInformation.cs">
+    <Compile Include="AppData\UserAccount.cs">
       <DependentUpon>DbysModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AppData\vw_all_user_role.cs">
@@ -211,6 +211,12 @@
     <Compile Include="Forms\Frm_Login.Designer.cs">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Receipt.Designer.cs">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\UserRepository.cs" />
@@ -277,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Receipt.resx">
+      <DependentUpon>Receipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

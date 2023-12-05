@@ -66,7 +66,7 @@ namespace Dbsys.Forms
                 {
                     var newMovie = new Movies();
                     newMovie.MovieNo = Convert.ToInt32(txtMovieNo.Text);
-                    newMovie.Description = txtDescription.Text;
+                    newMovie.MovieTitle = txtDescription.Text;
                     newMovie.Price = Convert.ToDecimal(txtPrice.Text);
                     newMovie.Availability = Convert.ToInt32(txtAvailability.Text);
                     newMovie.ShowingDate = Convert.ToDateTime(dtpShowDate.Text);
@@ -118,7 +118,7 @@ namespace Dbsys.Forms
                     if (movieToUpdate != null)
                     {
                         // Update the properties of the movie with the new values
-                        movieToUpdate.Description = txtDescription.Text;
+                        movieToUpdate.MovieTitle = txtDescription.Text;
                         movieToUpdate.Price = Convert.ToDecimal(txtPrice.Text);
                         movieToUpdate.Availability = Convert.ToInt32(txtAvailability.Text);
                         movieToUpdate.ShowingDate = Convert.ToDateTime(dtpShowDate.Text);

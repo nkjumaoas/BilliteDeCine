@@ -36,19 +36,19 @@ public partial class DBSYSEntities : DbContext
     }
 
 
-    public DbSet<Movies> Movies { get; set; }
-
     public DbSet<Role> Role { get; set; }
-
-    public DbSet<SalesDetails> SalesDetails { get; set; }
 
     public DbSet<UserAccount> UserAccount { get; set; }
 
-    public DbSet<SalesMaster> SalesMaster { get; set; }
-
     public DbSet<vw_all_user_role> vw_all_user_role { get; set; }
 
-    public DbSet<UserInformation> UserInformation { get; set; }
+    public DbSet<Movies> Movies { get; set; }
+
+    public DbSet<Ticket> Ticket { get; set; }
+
+    public DbSet<SalesMaster> SalesMaster { get; set; }
+
+    public DbSet<SalesDetails> SalesDetails { get; set; }
 
 
     public virtual int sp_newUser(string username, string password, Nullable<int> roleId, Nullable<int> createdBy)
@@ -216,6 +216,38 @@ public partial class DBSYSEntities : DbContext
 
 
         return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("vw_userinformation", movieNoParameter, descriptionParameter, customerNameParameter, contactNoParameter, emailAddressParameter, priceParameter, quantityParameter, totalSalesParameter);
+    }
+
+
+    public virtual int InsertSalesDetails(Nullable<int> movie, Nullable<int> quantity, Nullable<decimal> price, Nullable<decimal> totalAmount, Nullable<int> ticketNo)
+    {
+
+        var movieParameter = movie.HasValue ?
+            new ObjectParameter("Movie", movie) :
+            new ObjectParameter("Movie", typeof(int));
+
+
+        var quantityParameter = quantity.HasValue ?
+            new ObjectParameter("Quantity", quantity) :
+            new ObjectParameter("Quantity", typeof(int));
+
+
+        var priceParameter = price.HasValue ?
+            new ObjectParameter("Price", price) :
+            new ObjectParameter("Price", typeof(decimal));
+
+
+        var totalAmountParameter = totalAmount.HasValue ?
+            new ObjectParameter("TotalAmount", totalAmount) :
+            new ObjectParameter("TotalAmount", typeof(decimal));
+
+
+        var ticketNoParameter = ticketNo.HasValue ?
+            new ObjectParameter("TicketNo", ticketNo) :
+            new ObjectParameter("TicketNo", typeof(int));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("InsertSalesDetails", movieParameter, quantityParameter, priceParameter, totalAmountParameter, ticketNoParameter);
     }
 
 }

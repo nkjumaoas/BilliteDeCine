@@ -146,7 +146,7 @@
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(420, 63);
             this.btnlogin.TabIndex = 84;
-            this.btnlogin.Text = "BUY TICKET";
+            this.btnlogin.Text = "ADD TICKET";
             this.btnlogin.UseVisualStyleBackColor = false;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 

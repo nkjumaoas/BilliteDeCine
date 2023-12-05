@@ -20,7 +20,7 @@ public partial class Movies
 
     public int MovieNo { get; set; }
 
-    public string Description { get; set; }
+    public string MovieTitle { get; set; }
 
     public Nullable<decimal> Price { get; set; }
 
