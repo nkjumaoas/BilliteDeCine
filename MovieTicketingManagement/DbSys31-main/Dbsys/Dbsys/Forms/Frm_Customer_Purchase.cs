@@ -163,6 +163,22 @@ namespace Dbsys.Forms
                                 // Execute SQL command
                                 db.Database.ExecuteSqlCommand(insertQuery, parameters);
                                 hasChange = true;
+
+                                // Update the availability in the Movies table
+                                int movieNo = Convert.ToInt32(row.Cells["MovieNo"].Value);
+                                int purchasedQuantity = Convert.ToInt32(row.Cells["Quantity"].Value);
+
+                                var movieToUpdate = db.Movies.SingleOrDefault(m => m.MovieNo == movieNo);
+
+                                if (movieToUpdate != null)
+                                {
+                                    // Subtract the purchased quantity from the current availability
+                                    movieToUpdate.Availability -= purchasedQuantity;
+                                }
+
+                                // Save changes to the database
+                                db.SaveChanges();
+                                hasChange = true;
                             }
                             catch (Exception ex)
                             {
@@ -193,5 +209,11 @@ namespace Dbsys.Forms
             }
         }
 
+        private void pictureBox6_Click_1(object sender, EventArgs e)
+        {
+            Frm_Customer_Dashboard c = new Frm_Customer_Dashboard();
+            c.Show();
+            this.Hide();
+        }
     }
 }

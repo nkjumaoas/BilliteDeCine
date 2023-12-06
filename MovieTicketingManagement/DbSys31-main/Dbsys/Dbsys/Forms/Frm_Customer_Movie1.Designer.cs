@@ -38,7 +38,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnlogin = new System.Windows.Forms.Button();
             this.lblPrice = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -46,10 +45,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblMovieNo = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblMovieTitle = new System.Windows.Forms.Label();
             this.lblPesoSign = new System.Windows.Forms.Label();
+            this.lblShowingDate = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -162,17 +162,6 @@
             this.lblPrice.TabIndex = 83;
             this.lblPrice.Text = "369.00";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.WindowText;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.Window;
-            this.label12.Location = new System.Drawing.Point(861, 543);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 28);
-            this.label12.TabIndex = 82;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -258,16 +247,16 @@
             this.label7.TabIndex = 75;
             this.label7.Text = "Family, Comedy";
             // 
-            // label6
+            // lblMovieNo
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Maroon;
-            this.label6.Location = new System.Drawing.Point(861, 167);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 25);
-            this.label6.TabIndex = 74;
-            this.label6.Text = "MOVIE";
+            this.lblMovieNo.AutoSize = true;
+            this.lblMovieNo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMovieNo.ForeColor = System.Drawing.Color.Maroon;
+            this.lblMovieNo.Location = new System.Drawing.Point(861, 167);
+            this.lblMovieNo.Name = "lblMovieNo";
+            this.lblMovieNo.Size = new System.Drawing.Size(71, 25);
+            this.lblMovieNo.TabIndex = 74;
+            this.lblMovieNo.Text = "MOVIE";
             // 
             // lblDescription
             // 
@@ -281,16 +270,16 @@
             this.lblDescription.TabIndex = 73;
             this.lblDescription.Text = resources.GetString("lblDescription.Text");
             // 
-            // lblTitle
+            // lblMovieTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Agency FB", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblTitle.Location = new System.Drawing.Point(848, 192);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(163, 97);
-            this.lblTitle.TabIndex = 85;
-            this.lblTitle.Text = "Luck";
+            this.lblMovieTitle.AutoSize = true;
+            this.lblMovieTitle.Font = new System.Drawing.Font("Agency FB", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMovieTitle.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblMovieTitle.Location = new System.Drawing.Point(848, 192);
+            this.lblMovieTitle.Name = "lblMovieTitle";
+            this.lblMovieTitle.Size = new System.Drawing.Size(163, 97);
+            this.lblMovieTitle.TabIndex = 85;
+            this.lblMovieTitle.Text = "Luck";
             // 
             // lblPesoSign
             // 
@@ -304,17 +293,28 @@
             this.lblPesoSign.TabIndex = 86;
             this.lblPesoSign.Text = "₱";
             // 
+            // lblShowingDate
+            // 
+            this.lblShowingDate.AutoSize = true;
+            this.lblShowingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.lblShowingDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowingDate.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblShowingDate.Location = new System.Drawing.Point(867, 523);
+            this.lblShowingDate.Name = "lblShowingDate";
+            this.lblShowingDate.Size = new System.Drawing.Size(0, 28);
+            this.lblShowingDate.TabIndex = 87;
+            // 
             // Frm_Customer_Movie1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1534, 833);
+            this.Controls.Add(this.lblShowingDate);
             this.Controls.Add(this.lblPesoSign);
-            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.lblMovieTitle);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.lblPrice);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -322,7 +322,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblMovieNo);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox2);
@@ -354,7 +354,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -362,9 +361,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblMovieNo;
         private System.Windows.Forms.Label lblDescription;
-        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblMovieTitle;
         private System.Windows.Forms.Label lblPesoSign;
+        private System.Windows.Forms.Label lblShowingDate;
     }
 }

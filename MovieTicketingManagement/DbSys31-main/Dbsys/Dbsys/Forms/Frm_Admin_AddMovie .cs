@@ -93,9 +93,10 @@ namespace Dbsys.Forms
             txtPrice.Clear();
             txtAvailability.Clear();
             // Set back to the original selected date
-            dtpShowDate.Value = originalSelectedDate; 
-            // pbMovie.Clear();
-                                                      
+            dtpShowDate.Value = originalSelectedDate;
+            // Clear the image in the PictureBox
+            pbMovie.Image = null;  
+
 
 
         }
@@ -154,6 +155,28 @@ namespace Dbsys.Forms
             originalSelectedDate = Convert.ToDateTime(dgvAvailableMovie[4, e.RowIndex].Value);
 
             dtpShowDate.Value = originalSelectedDate;
+
+            // Retrieve the image file name from the DataGridView
+            string imageName = dgvAvailableMovie[5, e.RowIndex].Value.ToString();
+
+            // Construct the full path to the image
+            string imagePath = Path.Combine(IMG_PATH, imageName);
+
+            // Check if the file exists before attempting to load it
+            if (File.Exists(imagePath))
+            {
+                // Load the image into the PictureBox
+                pbMovie.Image = Image.FromFile(imagePath);
+            }
+            else
+            {
+                // Handle the case where the image file is not found
+                MessageBox.Show("Image not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                pbMovie.Image = null; // Clear the PictureBox
+            }
+
+
+
         }
 
         private void Frm_Admin_AvailableMovie_Load(object sender, EventArgs e)
