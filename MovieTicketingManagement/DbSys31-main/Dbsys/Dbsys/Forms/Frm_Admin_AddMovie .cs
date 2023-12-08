@@ -181,6 +181,7 @@ namespace Dbsys.Forms
 
         private void Frm_Admin_AvailableMovie_Load(object sender, EventArgs e)
         {
+            cbUser.Text = UserLogged.GetInstance().UserAccount.userName;
             try
             {
                 using (var db = new DBSYSEntities())
@@ -250,6 +251,22 @@ namespace Dbsys.Forms
             Frm_Admin_DashBoard d = new Frm_Admin_DashBoard();
             d.Show();
             this.Hide();
+        }
+
+        private void cbUser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbUser.SelectedItem != null && cbUser.SelectedItem.ToString() == "Switch Account")
+            {
+
+                Frm_Login c = new Frm_Login();
+                c.Show();
+                this.Hide();
+
+            }
+            else if (cbUser.SelectedItem != null && cbUser.SelectedItem.ToString() == "Log Out")
+            {
+                this.Close();
+            }
         }
     }
 }

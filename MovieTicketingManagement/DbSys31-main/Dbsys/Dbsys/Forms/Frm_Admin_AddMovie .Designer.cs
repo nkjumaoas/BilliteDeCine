@@ -53,6 +53,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblPath = new System.Windows.Forms.Label();
+            this.cbUser = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -278,6 +279,7 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Maroon;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnUpdate.Location = new System.Drawing.Point(942, 749);
@@ -291,6 +293,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Maroon;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDelete.Location = new System.Drawing.Point(1107, 750);
@@ -304,6 +307,7 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.Maroon;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSave.Location = new System.Drawing.Point(779, 748);
@@ -317,6 +321,7 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Maroon;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCancel.Location = new System.Drawing.Point(1272, 750);
@@ -335,12 +340,29 @@
             this.lblPath.Size = new System.Drawing.Size(0, 16);
             this.lblPath.TabIndex = 172;
             // 
-            // Frm_Admin_AvailableMovie
+            // cbUser
+            // 
+            this.cbUser.BackColor = System.Drawing.Color.Maroon;
+            this.cbUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbUser.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbUser.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbUser.FormattingEnabled = true;
+            this.cbUser.Items.AddRange(new object[] {
+            "Switch Account",
+            "Log Out"});
+            this.cbUser.Location = new System.Drawing.Point(1344, 69);
+            this.cbUser.Name = "cbUser";
+            this.cbUser.Size = new System.Drawing.Size(189, 29);
+            this.cbUser.TabIndex = 173;
+            this.cbUser.SelectedIndexChanged += new System.EventHandler(this.cbUser_SelectedIndexChanged);
+            // 
+            // Frm_Admin_AddMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1534, 833);
+            this.Controls.Add(this.cbUser);
             this.Controls.Add(this.lblPath);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
@@ -352,7 +374,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
-            this.Name = "Frm_Admin_AvailableMovie";
+            this.Name = "Frm_Admin_AddMovie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Customer_Movie3";
             this.Load += new System.EventHandler(this.Frm_Admin_AvailableMovie_Load);
@@ -393,5 +415,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblPath;
+        private System.Windows.Forms.ComboBox cbUser;
     }
 }

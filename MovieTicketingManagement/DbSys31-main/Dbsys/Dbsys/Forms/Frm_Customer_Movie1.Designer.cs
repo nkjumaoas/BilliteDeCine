@@ -50,6 +50,7 @@
             this.lblMovieTitle = new System.Windows.Forms.Label();
             this.lblPesoSign = new System.Windows.Forms.Label();
             this.lblShowingDate = new System.Windows.Forms.Label();
+            this.cbUser = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -304,12 +305,29 @@
             this.lblShowingDate.Size = new System.Drawing.Size(0, 28);
             this.lblShowingDate.TabIndex = 87;
             // 
+            // cbUser
+            // 
+            this.cbUser.BackColor = System.Drawing.Color.Maroon;
+            this.cbUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbUser.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbUser.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbUser.FormattingEnabled = true;
+            this.cbUser.Items.AddRange(new object[] {
+            "Switch Account",
+            "Log Out"});
+            this.cbUser.Location = new System.Drawing.Point(1344, 69);
+            this.cbUser.Name = "cbUser";
+            this.cbUser.Size = new System.Drawing.Size(189, 29);
+            this.cbUser.TabIndex = 88;
+            this.cbUser.SelectedIndexChanged += new System.EventHandler(this.cbUser_SelectedIndexChanged);
+            // 
             // Frm_Customer_Movie1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1534, 833);
+            this.Controls.Add(this.cbUser);
             this.Controls.Add(this.lblShowingDate);
             this.Controls.Add(this.lblPesoSign);
             this.Controls.Add(this.lblMovieTitle);
@@ -331,6 +349,7 @@
             this.Name = "Frm_Customer_Movie1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Customer_Movie1";
+            this.Load += new System.EventHandler(this.Frm_Customer_Movie1_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -366,5 +385,6 @@
         private System.Windows.Forms.Label lblMovieTitle;
         private System.Windows.Forms.Label lblPesoSign;
         private System.Windows.Forms.Label lblShowingDate;
+        private System.Windows.Forms.ComboBox cbUser;
     }
 }

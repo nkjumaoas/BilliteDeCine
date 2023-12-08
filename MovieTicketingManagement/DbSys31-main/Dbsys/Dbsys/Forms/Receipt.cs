@@ -20,8 +20,6 @@ namespace Dbsys.Forms
             // Set values in the constructor
             lblticketno.Text = ticketNo;
             lblmovietitle.Text = movieTitle;
-            lblquan.Text = quantity;
-            lbltamount.Text = totalAmount;
             lblQuantity.Text = quantity;
             lblTotalAmount.Text = totalAmount;
 
@@ -30,11 +28,7 @@ namespace Dbsys.Forms
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            //RotateLabelVertical(e.Graphics, lblticketno, new Point(10, 10));
-            //RotateLabelVertical(e.Graphics, lblmovietitle, new Point(10, 80));
-            //RotateLabelVertical(e.Graphics, lblshowdate, new Point(10, 150));
-            //RotateLabelVertical(e.Graphics, lblquan, new Point(10, 220));
-            //RotateLabelVertical(e.Graphics, lbltamount, new Point(10, 290));
+            
         }
 
         

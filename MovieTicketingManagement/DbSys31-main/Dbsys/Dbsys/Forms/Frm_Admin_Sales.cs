@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dbsys.AppData;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,16 +18,23 @@ namespace Dbsys.Forms
             InitializeComponent();
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            Frm_Customer_Dashboard cd = new Frm_Customer_Dashboard();
-            cd.Show();
-            this.Hide();
-        }
+        
 
         private void Frm_Customer_Purchase_Load(object sender, EventArgs e)
         {
-
+            cbUser.Text = UserLogged.GetInstance().UserAccount.userName; 
+            try
+            {
+                using (var db = new DBSYSEntities())
+                {
+                    // Load data from the Movies table into the DataGridView
+                    dgvSalesDetails.DataSource = db.SalesDetails.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data: {ex.Message}", "Load Data Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -39,6 +47,22 @@ namespace Dbsys.Forms
             Frm_Admin_DashBoard a = new Frm_Admin_DashBoard();
             a.Show();
             this.Dispose();
+        }
+
+        private void cbUser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbUser.SelectedItem != null && cbUser.SelectedItem.ToString() == "Switch Account")
+            {
+
+                Frm_Login c = new Frm_Login();
+                c.Show();
+                this.Hide();
+
+            }
+            else if (cbUser.SelectedItem != null && cbUser.SelectedItem.ToString() == "Log Out")
+            {
+                this.Close();
+            }
         }
     }
 }

@@ -111,6 +111,7 @@
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.Maroon;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnRegister.Location = new System.Drawing.Point(123, 534);

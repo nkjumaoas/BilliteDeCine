@@ -40,7 +40,9 @@ namespace Dbsys.Forms
 
         private void Frm_Customer_Purchase_Load(object sender, EventArgs e)
         {
-
+            comboBox1.Text = UserLogged.GetInstance().UserAccount.userName;
+            // Disable the Buy Ticket button initially
+            btnBuyTicket.Enabled = false; 
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -79,6 +81,21 @@ namespace Dbsys.Forms
             {
                 MessageBox.Show(ex.Message);
             }*/
+
+            int selectedQuantity = Convert.ToInt32(nupQuantity.Value);
+
+            // Check availability before adding the purchase to the list
+            using (var db = new DBSYSEntities())
+            {
+                int movieNo = Convert.ToInt32(lblMovieNo.Text);
+                var movie = db.Movies.SingleOrDefault(m => m.MovieNo == movieNo);
+
+                if (movie == null || movie.Availability < selectedQuantity)
+                {
+                    MessageBox.Show($"Sorry, the selected quantity for {lblMovieTitle.Text} is not available. Available stock: {movie.Availability}.", "Save Purchase", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
             object[] rowData = new object[]
             {
                 lblMovieNo.Text,
@@ -93,6 +110,12 @@ namespace Dbsys.Forms
 
             // Add the row data to the DataGridView
             dgvPurchase.Rows.Add(rowData);
+
+            // After adding data to the DataGridView, check if it has rows
+            if (dgvPurchase.Rows.Count > 0)
+            {
+                btnBuyTicket.Enabled = true; // Enable the Buy Ticket button
+            }
         }
 
         private void dgvPurchase_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -214,6 +237,23 @@ namespace Dbsys.Forms
             Frm_Customer_Dashboard c = new Frm_Customer_Dashboard();
             c.Show();
             this.Hide();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            if (cbUser.SelectedItem != null && cbUser.SelectedItem.ToString() == "Switch Account")
+            {
+
+                Frm_Login c = new Frm_Login();
+                c.Show();
+                this.Hide();
+
+            }
+            else if (cbUser.SelectedItem != null && cbUser.SelectedItem.ToString() == "Log Out")
+            {
+                this.Close();
+            }
         }
     }
 }

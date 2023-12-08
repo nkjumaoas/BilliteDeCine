@@ -38,6 +38,7 @@
             this.btnTotalSales = new System.Windows.Forms.Button();
             this.btnMovies = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.cbUser = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +46,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Maroon;
+            this.panel2.Controls.Add(this.cbUser);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -147,6 +149,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // cbUser
+            // 
+            this.cbUser.BackColor = System.Drawing.Color.Maroon;
+            this.cbUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbUser.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbUser.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbUser.FormattingEnabled = true;
+            this.cbUser.Items.AddRange(new object[] {
+            "Switch Account",
+            "Log Out"});
+            this.cbUser.Location = new System.Drawing.Point(1344, 70);
+            this.cbUser.Name = "cbUser";
+            this.cbUser.Size = new System.Drawing.Size(189, 29);
+            this.cbUser.TabIndex = 45;
+            this.cbUser.SelectedIndexChanged += new System.EventHandler(this.cbUser_SelectedIndexChanged);
+            // 
             // Frm_Admin_DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -159,9 +177,11 @@
             this.Controls.Add(this.btnTotalSales);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Name = "Frm_Admin_DashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Admin_DashBoard";
+            this.Load += new System.EventHandler(this.Frm_Admin_DashBoard_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -180,5 +200,6 @@
         private System.Windows.Forms.Button btnTotalSales;
         private System.Windows.Forms.Button btnMovies;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbUser;
     }
 }

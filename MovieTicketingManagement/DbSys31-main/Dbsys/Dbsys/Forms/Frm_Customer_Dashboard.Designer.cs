@@ -46,6 +46,7 @@
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbUser = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
@@ -121,6 +122,7 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1424, 726);
             this.flowLayoutPanel2.TabIndex = 56;
+            this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
             // panel3
             // 
@@ -251,12 +253,29 @@
     "________________________________________________________________________________" +
     "_______________________________";
             // 
+            // cbUser
+            // 
+            this.cbUser.BackColor = System.Drawing.Color.Maroon;
+            this.cbUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbUser.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbUser.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbUser.FormattingEnabled = true;
+            this.cbUser.Items.AddRange(new object[] {
+            "Switch Account",
+            "Log Out"});
+            this.cbUser.Location = new System.Drawing.Point(1344, 67);
+            this.cbUser.Name = "cbUser";
+            this.cbUser.Size = new System.Drawing.Size(189, 29);
+            this.cbUser.TabIndex = 58;
+            this.cbUser.SelectedIndexChanged += new System.EventHandler(this.cbUser_SelectedIndexChanged);
+            // 
             // Frm_Customer_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1534, 833);
+            this.Controls.Add(this.cbUser);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -264,6 +283,7 @@
             this.Name = "Frm_Customer_Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Customer_Dashboard";
+            this.Load += new System.EventHandler(this.Frm_Customer_Dashboard_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -300,5 +320,6 @@
         private System.Windows.Forms.PictureBox pictureBox21;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbUser;
     }
 }

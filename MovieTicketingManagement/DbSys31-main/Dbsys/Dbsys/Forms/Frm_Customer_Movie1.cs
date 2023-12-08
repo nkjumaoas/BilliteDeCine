@@ -36,5 +36,26 @@ namespace Dbsys.Forms
             cp.setValues(movie,lblMovieTitle.Text,lblPrice.Text);
             this.Dispose();
         }
+
+        private void cbUser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbUser.SelectedItem != null && cbUser.SelectedItem.ToString() == "Switch Account")
+            {
+
+                Frm_Login c = new Frm_Login();
+                c.Show();
+                this.Hide();
+
+            }
+            else if (cbUser.SelectedItem != null && cbUser.SelectedItem.ToString() == "Log Out")
+            {
+                this.Close();
+            }
+        }
+
+        private void Frm_Customer_Movie1_Load(object sender, EventArgs e)
+        {
+            cbUser.Text = UserLogged.GetInstance().UserAccount.userName;
+        }
     }
 }

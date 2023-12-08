@@ -80,5 +80,31 @@ namespace Dbsys.Forms
         {
 
         }
+
+        private void cbUser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbUser.SelectedItem != null && cbUser.SelectedItem.ToString() == "Switch Account")
+            {
+
+                Frm_Login c = new Frm_Login();
+                c.Show();
+                this.Hide();
+
+            }
+            else if (cbUser.SelectedItem != null && cbUser.SelectedItem.ToString() == "Log Out")
+            {
+                this.Close();
+            }
+        }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Frm_Customer_Dashboard_Load(object sender, EventArgs e)
+        {
+            cbUser.Text = UserLogged.GetInstance().UserAccount.userName;
+        }
     }
 }

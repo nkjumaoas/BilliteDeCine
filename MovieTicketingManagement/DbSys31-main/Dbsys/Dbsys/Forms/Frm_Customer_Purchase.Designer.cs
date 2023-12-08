@@ -58,6 +58,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnBuyTicket = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.cbUser = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPurchase)).BeginInit();
@@ -69,6 +71,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Maroon;
+            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -204,6 +207,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.groupBox1.Controls.Add(this.cbUser);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lblPrice);
             this.groupBox1.Controls.Add(this.lblMovieTitle);
@@ -303,6 +307,7 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.Maroon;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSave.Location = new System.Drawing.Point(317, 551);
@@ -387,16 +392,47 @@
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click_1);
             // 
+            // cbUser
+            // 
+            this.cbUser.BackColor = System.Drawing.Color.Maroon;
+            this.cbUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbUser.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbUser.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbUser.FormattingEnabled = true;
+            this.cbUser.Items.AddRange(new object[] {
+            "Switch Account",
+            "Log Out"});
+            this.cbUser.Location = new System.Drawing.Point(1344, 70);
+            this.cbUser.Name = "cbUser";
+            this.cbUser.Size = new System.Drawing.Size(189, 29);
+            this.cbUser.TabIndex = 173;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.Maroon;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Switch Account",
+            "Log Out"});
+            this.comboBox1.Location = new System.Drawing.Point(1344, 69);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(189, 29);
+            this.comboBox1.TabIndex = 109;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Frm_Customer_Purchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1534, 833);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.btnBuyTicket);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPurchase);
             this.Name = "Frm_Customer_Purchase";
@@ -444,5 +480,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBuyTicket;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.ComboBox cbUser;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

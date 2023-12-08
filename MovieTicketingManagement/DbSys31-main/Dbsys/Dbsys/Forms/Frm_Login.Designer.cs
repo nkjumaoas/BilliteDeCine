@@ -109,6 +109,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Maroon;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnLogin.Location = new System.Drawing.Point(127, 535);

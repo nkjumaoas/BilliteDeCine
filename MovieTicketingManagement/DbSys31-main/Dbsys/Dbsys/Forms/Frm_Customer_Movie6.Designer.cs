@@ -41,7 +41,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
-            this.cb1 = new System.Windows.Forms.CheckBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -49,6 +48,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblMovieTitle = new System.Windows.Forms.Label();
+            this.cbUser = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -67,7 +68,7 @@
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(420, 63);
             this.btnlogin.TabIndex = 101;
-            this.btnlogin.Text = "BUY TICKET";
+            this.btnlogin.Text = "ADD TICKET";
             this.btnlogin.UseVisualStyleBackColor = false;
             // 
             // label13
@@ -201,19 +202,6 @@
             this.lblDescription.TabIndex = 90;
             this.lblDescription.Text = resources.GetString("lblDescription.Text");
             // 
-            // cb1
-            // 
-            this.cb1.AutoSize = true;
-            this.cb1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.cb1.Font = new System.Drawing.Font("Agency FB", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb1.ForeColor = System.Drawing.SystemColors.Window;
-            this.cb1.Location = new System.Drawing.Point(829, 198);
-            this.cb1.Name = "cb1";
-            this.cb1.Size = new System.Drawing.Size(454, 101);
-            this.cb1.TabIndex = 89;
-            this.cb1.Text = "Kung Fu Panda";
-            this.cb1.UseVisualStyleBackColor = false;
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -292,12 +280,41 @@
     "________________________________________________________________________________" +
     "_______________________________";
             // 
+            // lblMovieTitle
+            // 
+            this.lblMovieTitle.AutoSize = true;
+            this.lblMovieTitle.Font = new System.Drawing.Font("Agency FB", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMovieTitle.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblMovieTitle.Location = new System.Drawing.Point(847, 198);
+            this.lblMovieTitle.Name = "lblMovieTitle";
+            this.lblMovieTitle.Size = new System.Drawing.Size(432, 97);
+            this.lblMovieTitle.TabIndex = 105;
+            this.lblMovieTitle.Text = "Kung Fu Panda";
+            // 
+            // cbUser
+            // 
+            this.cbUser.BackColor = System.Drawing.Color.Maroon;
+            this.cbUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbUser.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbUser.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbUser.FormattingEnabled = true;
+            this.cbUser.Items.AddRange(new object[] {
+            "Switch Account",
+            "Log Out"});
+            this.cbUser.Location = new System.Drawing.Point(1344, 69);
+            this.cbUser.Name = "cbUser";
+            this.cbUser.Size = new System.Drawing.Size(189, 29);
+            this.cbUser.TabIndex = 106;
+            this.cbUser.SelectedIndexChanged += new System.EventHandler(this.cbUser_SelectedIndexChanged);
+            // 
             // Frm_Customer_Movie6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1534, 833);
+            this.Controls.Add(this.cbUser);
+            this.Controls.Add(this.lblMovieTitle);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -310,7 +327,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblDescription);
-            this.Controls.Add(this.cb1);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel2);
@@ -318,6 +334,7 @@
             this.Name = "Frm_Customer_Movie6";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Customer_Movie3";
+            this.Load += new System.EventHandler(this.Frm_Customer_Movie6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -344,7 +361,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblDescription;
-        private System.Windows.Forms.CheckBox cb1;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
@@ -352,5 +368,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMovieTitle;
+        private System.Windows.Forms.ComboBox cbUser;
     }
 }
