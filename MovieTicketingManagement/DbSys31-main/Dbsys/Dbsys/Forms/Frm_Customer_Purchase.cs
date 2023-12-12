@@ -82,6 +82,13 @@ namespace Dbsys.Forms
                 MessageBox.Show(ex.Message);
             }*/
 
+            if (nupQuantity.Value == 0)
+            {
+                MessageBox.Show("Please select a quantity before saving the purchase.", "Save Purchase", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
             int selectedQuantity = Convert.ToInt32(nupQuantity.Value);
 
             // Check availability before adding the purchase to the list
@@ -220,9 +227,9 @@ namespace Dbsys.Forms
                 }
                 if (newSalesMaster != null)
                 {
-                    Receipt r = new Receipt(newSalesMaster.TicketNo.ToString(),lblMovieTitle.Text,nupQuantity.Value.ToString(),lblTotalSales.Text);
+                    //Receipt r = new Receipt(newSalesMaster.TicketNo.ToString(),lblMovieTitle.Text,lblShowDate.Text,nupQuantity.Value.ToString(),lblTotalSales.Text);
 
-                    r.Show();
+                    //r.Show();
                 }
 
             }

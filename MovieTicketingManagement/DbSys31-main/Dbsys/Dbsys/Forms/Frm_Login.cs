@@ -54,7 +54,7 @@ namespace Dbsys.Forms
                             break;
                         case Role.Teacher:
                             // Load Teacher Dashboard
-                            new Frm_Teacher_DashBoard().Show();
+                            new Frm_Staff_DashBoard().Show();
                             this.Hide();
                             break;
                         case Role.Admin:

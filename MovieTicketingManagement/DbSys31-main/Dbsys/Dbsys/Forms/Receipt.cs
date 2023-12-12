@@ -13,13 +13,14 @@ namespace Dbsys.Forms
 {
     public partial class Receipt : Form
     {
-        public Receipt(string ticketNo, string movieTitle, string quantity, string totalAmount)
+        public Receipt(string ticketNo, string movieTitle, string showdate, string quantity, string totalAmount)
         {
             InitializeComponent();
 
             // Set values in the constructor
             lblticketno.Text = ticketNo;
             lblmovietitle.Text = movieTitle;
+            lblShowingDate.Text = showdate;
             lblQuantity.Text = quantity;
             lblTotalAmount.Text = totalAmount;
 

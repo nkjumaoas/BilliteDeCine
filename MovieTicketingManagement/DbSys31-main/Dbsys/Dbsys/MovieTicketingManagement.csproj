@@ -109,6 +109,18 @@
     <Compile Include="Forms\Frm_Admin_Sales.Designer.cs">
       <DependentUpon>Frm_Admin_Sales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_Admin_Movie1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Admin_Movie1.Designer.cs">
+      <DependentUpon>Frm_Admin_Movie1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Admin_Purchase .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Admin_Purchase .Designer.cs">
+      <DependentUpon>Frm_Admin_Purchase .cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_Customer_Purchase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,11 +193,17 @@
     <Compile Include="Forms\Frm_Customer_Dashboard.Designer.cs">
       <DependentUpon>Frm_Customer_Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_Teacher_DashBoard.cs">
+    <Compile Include="Forms\Frm_Admin_Availability.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Teacher_DashBoard.Designer.cs">
-      <DependentUpon>Frm_Teacher_DashBoard.cs</DependentUpon>
+    <Compile Include="Forms\Frm_Admin_Availability.Designer.cs">
+      <DependentUpon>Frm_Admin_Availability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_Staff_DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Staff_DashBoard.Designer.cs">
+      <DependentUpon>Frm_Staff_DashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_Admin_UserEntry.cs">
       <SubType>Form</SubType>
@@ -221,6 +239,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Admin_Sales.resx">
       <DependentUpon>Frm_Admin_Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Admin_Movie1.resx">
+      <DependentUpon>Frm_Admin_Movie1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Admin_Purchase .resx">
+      <DependentUpon>Frm_Admin_Purchase .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Customer_Purchase.resx">
       <DependentUpon>Frm_Customer_Purchase.cs</DependentUpon>
@@ -258,8 +282,11 @@
     <EmbeddedResource Include="Forms\Frm_Customer_Dashboard.resx">
       <DependentUpon>Frm_Customer_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_Teacher_DashBoard.resx">
-      <DependentUpon>Frm_Teacher_DashBoard.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Frm_Admin_Availability.resx">
+      <DependentUpon>Frm_Admin_Availability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Staff_DashBoard.resx">
+      <DependentUpon>Frm_Staff_DashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Admin_UserEntry.resx">
       <DependentUpon>Frm_Admin_UserEntry.cs</DependentUpon>

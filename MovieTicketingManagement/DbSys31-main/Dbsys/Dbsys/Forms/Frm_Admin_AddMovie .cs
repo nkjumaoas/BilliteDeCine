@@ -32,6 +32,11 @@ namespace Dbsys.Forms
 
         }
 
+        public Image MovieImage
+        {
+            get { return pbMovie.Image; }
+        }
+
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             Frm_Customer_Dashboard cd = new Frm_Customer_Dashboard();
@@ -76,6 +81,9 @@ namespace Dbsys.Forms
 
                     hasChange = true;
                     dgvAvailableMovie.DataSource = db.Movies.ToList();
+                    
+
+
                 }
                 MessageBox.Show("Data has been added ...", "Save new movies", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -175,12 +183,11 @@ namespace Dbsys.Forms
                 pbMovie.Image = null; // Clear the PictureBox
             }
 
-
-
         }
 
         private void Frm_Admin_AvailableMovie_Load(object sender, EventArgs e)
         {
+            
             cbUser.Text = UserLogged.GetInstance().UserAccount.userName;
             try
             {
