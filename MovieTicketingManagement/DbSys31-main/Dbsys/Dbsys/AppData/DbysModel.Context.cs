@@ -42,11 +42,11 @@ public partial class DBSYSEntities : DbContext
 
     public DbSet<vw_all_user_role> vw_all_user_role { get; set; }
 
-    public DbSet<Movies> Movies { get; set; }
-
     public DbSet<Ticket> Ticket { get; set; }
 
     public DbSet<SalesMaster> SalesMaster { get; set; }
+
+    public DbSet<Movies> Movies { get; set; }
 
     public DbSet<SalesDetails> SalesDetails { get; set; }
 

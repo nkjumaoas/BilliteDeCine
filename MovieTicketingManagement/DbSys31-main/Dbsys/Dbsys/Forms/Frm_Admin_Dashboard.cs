@@ -34,7 +34,7 @@ namespace Dbsys.Forms
 
         private void btnMovies_Click(object sender, EventArgs e)
         {
-            Frm_Admin_Availability c = new Frm_Admin_Availability();
+            Frm_Admin_AvailableMovies c = new Frm_Admin_AvailableMovies();
             c.Show();   
             this.Hide();
         }

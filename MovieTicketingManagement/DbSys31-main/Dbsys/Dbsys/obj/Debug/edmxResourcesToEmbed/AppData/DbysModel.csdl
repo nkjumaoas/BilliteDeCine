@@ -40,10 +40,8 @@
       <Parameter Name="Quantity" Mode="In" Type="Int32" />
       <Parameter Name="TotalSales" Mode="In" Type="Int64" />
     </FunctionImport>
-    <EntitySet Name="Movies" EntityType="DBSYSModel.Movies" />
     <EntitySet Name="Ticket" EntityType="DBSYSModel.Ticket" />
     <EntitySet Name="SalesMaster" EntityType="DBSYSModel.SalesMaster" />
-    <EntitySet Name="SalesDetails" EntityType="DBSYSModel.SalesDetails" />
     <FunctionImport Name="InsertSalesDetails">
       <Parameter Name="Movie" Mode="In" Type="Int32" />
       <Parameter Name="Quantity" Mode="In" Type="Int32" />
@@ -51,6 +49,8 @@
       <Parameter Name="TotalAmount" Mode="In" Type="Decimal" />
       <Parameter Name="TicketNo" Mode="In" Type="Int32" />
     </FunctionImport>
+    <EntitySet Name="Movies" EntityType="DBSYSModel.Movies" />
+    <EntitySet Name="SalesDetails" EntityType="DBSYSModel.SalesDetails" />
   </EntityContainer>
   <EntityType Name="Role">
     <Key>
@@ -82,17 +82,6 @@
     <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="Movies">
-    <Key>
-      <PropertyRef Name="MovieNo" />
-    </Key>
-    <Property Name="MovieNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="MovieTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="Availability" Type="Int32" />
-    <Property Name="ShowingDate" Type="DateTime" Precision="3" />
-    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-  </EntityType>
   <EntityType Name="Ticket">
     <Key>
       <PropertyRef Name="TicketNo" />
@@ -109,6 +98,17 @@
     </Key>
     <Property Name="TicketNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="DateSale" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Movies">
+    <Key>
+      <PropertyRef Name="MovieNo" />
+    </Key>
+    <Property Name="MovieNo" Type="Int32" Nullable="false" />
+    <Property Name="MovieTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Availability" Type="Int32" />
+    <Property Name="ShowingDate" Type="DateTime" Precision="3" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="SalesDetails">
     <Key>

@@ -49,7 +49,7 @@ namespace Dbsys.Forms
                     {
                         case Role.Student:
                             // Load student Dashboard
-                            new Frm_Customer_Dashboard().Show();
+                            new Frm_Admin_AvailableMovies().Show();
                             this.Hide();
                             break;
                         case Role.Teacher:

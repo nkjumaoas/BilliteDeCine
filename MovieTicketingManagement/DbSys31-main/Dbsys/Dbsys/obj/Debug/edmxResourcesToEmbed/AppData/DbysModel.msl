@@ -35,18 +35,6 @@
     <FunctionImportMapping FunctionImportName="InsertUserInformation" FunctionName="DBSYSModel.Store.InsertUserInformation" />
     <FunctionImportMapping FunctionImportName="vw_user_information" FunctionName="DBSYSModel.Store.vw_user_information" />
     <FunctionImportMapping FunctionImportName="vw_userinformation" FunctionName="DBSYSModel.Store.vw_user_information" />
-    <EntitySetMapping Name="Movies">
-      <EntityTypeMapping TypeName="DBSYSModel.Movies">
-        <MappingFragment StoreEntitySet="Movies">
-          <ScalarProperty Name="Image" ColumnName="Image" />
-          <ScalarProperty Name="ShowingDate" ColumnName="ShowingDate" />
-          <ScalarProperty Name="Availability" ColumnName="Availability" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="MovieTitle" ColumnName="MovieTitle" />
-          <ScalarProperty Name="MovieNo" ColumnName="MovieNo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Ticket">
       <EntityTypeMapping TypeName="DBSYSModel.Ticket">
         <MappingFragment StoreEntitySet="Ticket">
@@ -66,6 +54,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="InsertSalesDetails" FunctionName="DBSYSModel.Store.InsertSalesDetails" />
+    <EntitySetMapping Name="Movies">
+      <EntityTypeMapping TypeName="DBSYSModel.Movies">
+        <MappingFragment StoreEntitySet="Movies">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="ShowingDate" ColumnName="ShowingDate" />
+          <ScalarProperty Name="Availability" ColumnName="Availability" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="MovieTitle" ColumnName="MovieTitle" />
+          <ScalarProperty Name="MovieNo" ColumnName="MovieNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="SalesDetails">
       <EntityTypeMapping TypeName="DBSYSModel.SalesDetails">
         <MappingFragment StoreEntitySet="SalesDetails">
@@ -77,6 +78,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="InsertSalesDetails" FunctionName="DBSYSModel.Store.InsertSalesDetails" />
   </EntityContainerMapping>
 </Mapping>

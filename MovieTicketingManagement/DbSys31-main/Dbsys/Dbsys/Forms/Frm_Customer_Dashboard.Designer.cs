@@ -30,46 +30,63 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Customer_Dashboard));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbUser = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pbMovie8 = new System.Windows.Forms.PictureBox();
+            this.pbMovie7 = new System.Windows.Forms.PictureBox();
+            this.pbMovie6 = new System.Windows.Forms.PictureBox();
+            this.pbMovie5 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pbMovie4 = new System.Windows.Forms.PictureBox();
+            this.pbMovie3 = new System.Windows.Forms.PictureBox();
+            this.pbMovie2 = new System.Windows.Forms.PictureBox();
+            this.pbMovie1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Maroon;
+            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(-1, -3);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1545, 100);
-            this.panel2.TabIndex = 55;
+            this.panel2.TabIndex = 86;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.Maroon;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Switch Account",
+            "Log Out"});
+            this.comboBox1.Location = new System.Drawing.Point(1344, 69);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(189, 29);
+            this.comboBox1.TabIndex = 109;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -79,7 +96,7 @@
             this.label5.Location = new System.Drawing.Point(178, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 12);
-            this.label5.TabIndex = 42;
+            this.label5.TabIndex = 44;
             this.label5.Text = "-MOVIE TICKET-";
             // 
             // label4
@@ -91,7 +108,7 @@
             this.label4.Location = new System.Drawing.Point(132, 24);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(170, 39);
-            this.label4.TabIndex = 41;
+            this.label4.TabIndex = 43;
             this.label4.Text = "Billete de Cine";
             // 
             // pictureBox1
@@ -104,135 +121,17 @@
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
-            // flowLayoutPanel2
+            // label1
             // 
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Controls.Add(this.panel3);
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox14);
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox15);
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox16);
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox17);
-            this.flowLayoutPanel2.Controls.Add(this.panel4);
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox18);
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox19);
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox20);
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox21);
-            this.flowLayoutPanel2.Controls.Add(this.panel1);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(109, 103);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1424, 726);
-            this.flowLayoutPanel2.TabIndex = 56;
-            this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1298, 40);
-            this.panel3.TabIndex = 53;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(3, 49);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(320, 360);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox14.TabIndex = 54;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(329, 49);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(320, 360);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox15.TabIndex = 55;
-            this.pictureBox15.TabStop = false;
-            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(655, 49);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(320, 360);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox16.TabIndex = 56;
-            this.pictureBox16.TabStop = false;
-            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(981, 49);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(320, 360);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox17.TabIndex = 57;
-            this.pictureBox17.TabStop = false;
-            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Location = new System.Drawing.Point(3, 415);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1298, 40);
-            this.panel4.TabIndex = 58;
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(3, 461);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(320, 360);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox18.TabIndex = 60;
-            this.pictureBox18.TabStop = false;
-            this.pictureBox18.Click += new System.EventHandler(this.pictureBox18_Click);
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(329, 461);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(320, 360);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox19.TabIndex = 61;
-            this.pictureBox19.TabStop = false;
-            this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
-            this.pictureBox20.Location = new System.Drawing.Point(655, 461);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(320, 360);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox20.TabIndex = 62;
-            this.pictureBox20.TabStop = false;
-            this.pictureBox20.Click += new System.EventHandler(this.pictureBox20_Click);
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
-            this.pictureBox21.Location = new System.Drawing.Point(981, 461);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(320, 360);
-            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox21.TabIndex = 63;
-            this.pictureBox21.TabStop = false;
-            this.pictureBox21.Click += new System.EventHandler(this.pictureBox21_Click);
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(-3, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1351, 16);
+            this.label1.TabIndex = 87;
+            this.label1.Text = "_________________________________________________________________________________" +
+    "________________________________________________________________________________" +
+    "_______________________________";
             // 
             // panel1
             // 
@@ -241,33 +140,126 @@
             this.panel1.Size = new System.Drawing.Size(1298, 40);
             this.panel1.TabIndex = 64;
             // 
-            // label1
+            // pbMovie8
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(-4, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1351, 16);
-            this.label1.TabIndex = 57;
-            this.label1.Text = "_________________________________________________________________________________" +
-    "________________________________________________________________________________" +
-    "_______________________________";
+            this.pbMovie8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMovie8.Location = new System.Drawing.Point(981, 461);
+            this.pbMovie8.Name = "pbMovie8";
+            this.pbMovie8.Size = new System.Drawing.Size(320, 360);
+            this.pbMovie8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMovie8.TabIndex = 63;
+            this.pbMovie8.TabStop = false;
+            this.pbMovie8.Click += new System.EventHandler(this.pbMovie8_Click);
             // 
-            // cbUser
+            // pbMovie7
             // 
-            this.cbUser.BackColor = System.Drawing.Color.Maroon;
-            this.cbUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cbUser.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbUser.ForeColor = System.Drawing.SystemColors.Window;
-            this.cbUser.FormattingEnabled = true;
-            this.cbUser.Items.AddRange(new object[] {
-            "Switch Account",
-            "Log Out"});
-            this.cbUser.Location = new System.Drawing.Point(1344, 67);
-            this.cbUser.Name = "cbUser";
-            this.cbUser.Size = new System.Drawing.Size(189, 29);
-            this.cbUser.TabIndex = 58;
-            this.cbUser.SelectedIndexChanged += new System.EventHandler(this.cbUser_SelectedIndexChanged);
+            this.pbMovie7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMovie7.Location = new System.Drawing.Point(655, 461);
+            this.pbMovie7.Name = "pbMovie7";
+            this.pbMovie7.Size = new System.Drawing.Size(320, 360);
+            this.pbMovie7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMovie7.TabIndex = 62;
+            this.pbMovie7.TabStop = false;
+            this.pbMovie7.Click += new System.EventHandler(this.pbMovie7_Click);
+            // 
+            // pbMovie6
+            // 
+            this.pbMovie6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMovie6.Location = new System.Drawing.Point(329, 461);
+            this.pbMovie6.Name = "pbMovie6";
+            this.pbMovie6.Size = new System.Drawing.Size(320, 360);
+            this.pbMovie6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMovie6.TabIndex = 61;
+            this.pbMovie6.TabStop = false;
+            this.pbMovie6.Click += new System.EventHandler(this.pbMovie6_Click);
+            // 
+            // pbMovie5
+            // 
+            this.pbMovie5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMovie5.Location = new System.Drawing.Point(3, 461);
+            this.pbMovie5.Name = "pbMovie5";
+            this.pbMovie5.Size = new System.Drawing.Size(320, 360);
+            this.pbMovie5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMovie5.TabIndex = 60;
+            this.pbMovie5.TabStop = false;
+            this.pbMovie5.Click += new System.EventHandler(this.pbMovie5_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(3, 415);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1298, 40);
+            this.panel4.TabIndex = 58;
+            // 
+            // pbMovie4
+            // 
+            this.pbMovie4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMovie4.Location = new System.Drawing.Point(981, 49);
+            this.pbMovie4.Name = "pbMovie4";
+            this.pbMovie4.Size = new System.Drawing.Size(320, 360);
+            this.pbMovie4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMovie4.TabIndex = 57;
+            this.pbMovie4.TabStop = false;
+            this.pbMovie4.Click += new System.EventHandler(this.pbMovie4_Click);
+            // 
+            // pbMovie3
+            // 
+            this.pbMovie3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMovie3.Location = new System.Drawing.Point(655, 49);
+            this.pbMovie3.Name = "pbMovie3";
+            this.pbMovie3.Size = new System.Drawing.Size(320, 360);
+            this.pbMovie3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMovie3.TabIndex = 56;
+            this.pbMovie3.TabStop = false;
+            this.pbMovie3.Click += new System.EventHandler(this.pbMovie3_Click);
+            // 
+            // pbMovie2
+            // 
+            this.pbMovie2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMovie2.Location = new System.Drawing.Point(329, 49);
+            this.pbMovie2.Name = "pbMovie2";
+            this.pbMovie2.Size = new System.Drawing.Size(320, 360);
+            this.pbMovie2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMovie2.TabIndex = 55;
+            this.pbMovie2.TabStop = false;
+            this.pbMovie2.Click += new System.EventHandler(this.pbMovie2_Click);
+            // 
+            // pbMovie1
+            // 
+            this.pbMovie1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMovie1.Location = new System.Drawing.Point(3, 49);
+            this.pbMovie1.Name = "pbMovie1";
+            this.pbMovie1.Size = new System.Drawing.Size(320, 360);
+            this.pbMovie1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMovie1.TabIndex = 54;
+            this.pbMovie1.TabStop = false;
+            this.pbMovie1.Click += new System.EventHandler(this.pbMovie1_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1298, 40);
+            this.panel3.TabIndex = 53;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.Controls.Add(this.panel3);
+            this.flowLayoutPanel2.Controls.Add(this.pbMovie1);
+            this.flowLayoutPanel2.Controls.Add(this.pbMovie2);
+            this.flowLayoutPanel2.Controls.Add(this.pbMovie3);
+            this.flowLayoutPanel2.Controls.Add(this.pbMovie4);
+            this.flowLayoutPanel2.Controls.Add(this.panel4);
+            this.flowLayoutPanel2.Controls.Add(this.pbMovie5);
+            this.flowLayoutPanel2.Controls.Add(this.pbMovie6);
+            this.flowLayoutPanel2.Controls.Add(this.pbMovie7);
+            this.flowLayoutPanel2.Controls.Add(this.pbMovie8);
+            this.flowLayoutPanel2.Controls.Add(this.panel1);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(109, 103);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1424, 726);
+            this.flowLayoutPanel2.TabIndex = 89;
             // 
             // Frm_Customer_Dashboard
             // 
@@ -275,27 +267,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1534, 833);
-            this.Controls.Add(this.cbUser);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_Customer_Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_Customer_Dashboard";
-            this.Load += new System.EventHandler(this.Frm_Customer_Dashboard_Load);
+            this.Text = "DashBoard";
+            this.Load += new System.EventHandler(this.Frm_Teacher_DashBoard_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMovie1)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,22 +295,22 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.PictureBox pictureBox19;
-        private System.Windows.Forms.PictureBox pictureBox20;
-        private System.Windows.Forms.PictureBox pictureBox21;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbUser;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pbMovie8;
+        private System.Windows.Forms.PictureBox pbMovie7;
+        private System.Windows.Forms.PictureBox pbMovie6;
+        private System.Windows.Forms.PictureBox pbMovie5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pbMovie4;
+        private System.Windows.Forms.PictureBox pbMovie3;
+        private System.Windows.Forms.PictureBox pbMovie2;
+        private System.Windows.Forms.PictureBox pbMovie1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }

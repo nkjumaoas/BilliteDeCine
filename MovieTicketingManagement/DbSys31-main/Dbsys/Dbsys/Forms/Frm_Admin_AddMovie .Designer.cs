@@ -376,7 +376,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Frm_Admin_AddMovie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_Customer_Movie3";
+            this.Text = "+Movies";
             this.Load += new System.EventHandler(this.Frm_Admin_AvailableMovie_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

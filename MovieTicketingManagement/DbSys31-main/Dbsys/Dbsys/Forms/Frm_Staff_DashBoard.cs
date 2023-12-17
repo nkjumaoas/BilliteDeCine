@@ -37,5 +37,26 @@ namespace Dbsys.Forms
                 this.Close();
             }
         }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            Frm_Staff_UserEntry s = new Frm_Staff_UserEntry();
+            s.Show();
+            this.Hide();
+        }
+
+        private void btnAddMovies_Click(object sender, EventArgs e)
+        {
+            Frm_Staff_AddMovie s = new Frm_Staff_AddMovie();
+            s.Show();
+            this.Hide();
+        }
+
+        private void btnTotalSales_Click(object sender, EventArgs e)
+        {
+            Frm_Staff_Sales s = new Frm_Staff_Sales();
+            s.Show();
+            this.Hide();
+        }
     }
 }

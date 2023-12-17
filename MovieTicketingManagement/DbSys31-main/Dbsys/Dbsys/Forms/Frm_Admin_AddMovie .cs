@@ -39,7 +39,7 @@ namespace Dbsys.Forms
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Frm_Customer_Dashboard cd = new Frm_Customer_Dashboard();
+            Frm_Admin_AvailableMovies cd = new Frm_Admin_AvailableMovies();
             cd.Show();
             this.Hide();
         }

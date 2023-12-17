@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="MovieNo" />
           </Key>
-          <Property Name="MovieNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MovieNo" Type="int" Nullable="false" />
           <Property Name="MovieTitle" Type="varchar" MaxLength="50" />
           <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
           <Property Name="Availability" Type="int" />
@@ -24,8 +24,6 @@
           <Property Name="roleName" Type="nvarchar" MaxLength="50" />
           <Property Name="roleDescription" Type="nvarchar" MaxLength="100" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'DBSYS.dbo.SalesDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="SalesDetails">
           <Key>
             <PropertyRef Name="TicketNo" />
@@ -109,17 +107,9 @@ warning 6002: The table/view 'DBSYS.dbo.vw_all_user_role' does not have a primar
         <EntityContainer Name="DBSYSModelStoreContainer">
           <EntitySet Name="Movies" EntityType="Self.Movies" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SalesDetails" EntityType="Self.SalesDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SalesMaster" EntityType="Self.SalesMaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserAccount" EntityType="Self.UserAccount" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SalesDetails" EntityType="Self.SalesDetails" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-[SalesDetails].[TicketNo] AS [TicketNo], 
-[SalesDetails].[Movie] AS [Movie], 
-[SalesDetails].[Quantity] AS [Quantity], 
-[SalesDetails].[Price] AS [Price], 
-[SalesDetails].[TotalAmount] AS [TotalAmount]
-FROM [dbo].[SalesDetails] AS [SalesDetails]</DefiningQuery>
-          </EntitySet>
           <EntitySet Name="Ticket" EntityType="Self.Ticket" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
 [Ticket].[TicketNo] AS [TicketNo], 
@@ -182,10 +172,8 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
             <Parameter Name="Quantity" Mode="In" Type="Int32" />
             <Parameter Name="TotalSales" Mode="In" Type="Int64" />
           </FunctionImport>
-          <EntitySet Name="Movies" EntityType="DBSYSModel.Movies" />
           <EntitySet Name="Ticket" EntityType="DBSYSModel.Ticket" />
           <EntitySet Name="SalesMaster" EntityType="DBSYSModel.SalesMaster" />
-          <EntitySet Name="SalesDetails" EntityType="DBSYSModel.SalesDetails" />
           <FunctionImport Name="InsertSalesDetails">
             <Parameter Name="Movie" Mode="In" Type="Int32" />
             <Parameter Name="Quantity" Mode="In" Type="Int32" />
@@ -193,6 +181,8 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
             <Parameter Name="TotalAmount" Mode="In" Type="Decimal" />
             <Parameter Name="TicketNo" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="Movies" EntityType="DBSYSModel.Movies" />
+          <EntitySet Name="SalesDetails" EntityType="DBSYSModel.SalesDetails" />
           </EntityContainer>
         <EntityType Name="Role">
           <Key>
@@ -224,17 +214,6 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
           <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="Movies">
-          <Key>
-            <PropertyRef Name="MovieNo" />
-          </Key>
-          <Property Name="MovieNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MovieTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Availability" Type="Int32" />
-          <Property Name="ShowingDate" Type="DateTime" Precision="3" />
-          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="Ticket">
           <Key>
             <PropertyRef Name="TicketNo" />
@@ -251,6 +230,17 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
           </Key>
           <Property Name="TicketNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DateSale" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Movies">
+          <Key>
+            <PropertyRef Name="MovieNo" />
+          </Key>
+          <Property Name="MovieNo" Type="Int32" Nullable="false" />
+          <Property Name="MovieTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Availability" Type="Int32" />
+          <Property Name="ShowingDate" Type="DateTime" Precision="3" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="SalesDetails">
           <Key>
@@ -302,18 +292,6 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
           <FunctionImportMapping FunctionImportName="InsertUserInformation" FunctionName="DBSYSModel.Store.InsertUserInformation" />
           <FunctionImportMapping FunctionImportName="vw_user_information" FunctionName="DBSYSModel.Store.vw_user_information" />
           <FunctionImportMapping FunctionImportName="vw_userinformation" FunctionName="DBSYSModel.Store.vw_user_information" />
-          <EntitySetMapping Name="Movies">
-            <EntityTypeMapping TypeName="DBSYSModel.Movies">
-              <MappingFragment StoreEntitySet="Movies">
-                <ScalarProperty Name="Image" ColumnName="Image" />
-                <ScalarProperty Name="ShowingDate" ColumnName="ShowingDate" />
-                <ScalarProperty Name="Availability" ColumnName="Availability" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="MovieTitle" ColumnName="MovieTitle" />
-                <ScalarProperty Name="MovieNo" ColumnName="MovieNo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Ticket">
             <EntityTypeMapping TypeName="DBSYSModel.Ticket">
               <MappingFragment StoreEntitySet="Ticket">
@@ -333,6 +311,19 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="InsertSalesDetails" FunctionName="DBSYSModel.Store.InsertSalesDetails" />
+          <EntitySetMapping Name="Movies">
+            <EntityTypeMapping TypeName="DBSYSModel.Movies">
+              <MappingFragment StoreEntitySet="Movies">
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="ShowingDate" ColumnName="ShowingDate" />
+                <ScalarProperty Name="Availability" ColumnName="Availability" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="MovieTitle" ColumnName="MovieTitle" />
+                <ScalarProperty Name="MovieNo" ColumnName="MovieNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="SalesDetails">
             <EntityTypeMapping TypeName="DBSYSModel.SalesDetails">
               <MappingFragment StoreEntitySet="SalesDetails">
@@ -344,7 +335,6 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="InsertSalesDetails" FunctionName="DBSYSModel.Store.InsertSalesDetails" />
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -45,6 +45,7 @@
             this.TotalSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblShowDate = new System.Windows.Forms.Label();
             this.cbUser = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnBuyTicket = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.lblShowDate = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPurchase)).BeginInit();
@@ -247,6 +247,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Purchase";
             // 
+            // lblShowDate
+            // 
+            this.lblShowDate.AutoSize = true;
+            this.lblShowDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowDate.ForeColor = System.Drawing.Color.White;
+            this.lblShowDate.Location = new System.Drawing.Point(242, 244);
+            this.lblShowDate.Name = "lblShowDate";
+            this.lblShowDate.Size = new System.Drawing.Size(0, 23);
+            this.lblShowDate.TabIndex = 174;
+            // 
             // cbUser
             // 
             this.cbUser.BackColor = System.Drawing.Color.Maroon;
@@ -425,16 +435,6 @@
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click_1);
             // 
-            // lblShowDate
-            // 
-            this.lblShowDate.AutoSize = true;
-            this.lblShowDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShowDate.ForeColor = System.Drawing.Color.White;
-            this.lblShowDate.Location = new System.Drawing.Point(242, 244);
-            this.lblShowDate.Name = "lblShowDate";
-            this.lblShowDate.Size = new System.Drawing.Size(0, 23);
-            this.lblShowDate.TabIndex = 174;
-            // 
             // Frm_Admin_Purchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -449,7 +449,7 @@
             this.Controls.Add(this.dgvPurchase);
             this.Name = "Frm_Admin_Purchase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_Customer_Movie3";
+            this.Text = "Purchase";
             this.Load += new System.EventHandler(this.Frm_Customer_Purchase_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

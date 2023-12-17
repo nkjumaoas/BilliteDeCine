@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="MovieNo" />
     </Key>
-    <Property Name="MovieNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MovieNo" Type="int" Nullable="false" />
     <Property Name="MovieTitle" Type="varchar" MaxLength="50" />
     <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
     <Property Name="Availability" Type="int" />
@@ -19,8 +19,6 @@
     <Property Name="roleName" Type="nvarchar" MaxLength="50" />
     <Property Name="roleDescription" Type="nvarchar" MaxLength="100" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'DBSYS.dbo.SalesDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="SalesDetails">
     <Key>
       <PropertyRef Name="TicketNo" />
@@ -104,17 +102,9 @@ warning 6002: The table/view 'DBSYS.dbo.vw_all_user_role' does not have a primar
   <EntityContainer Name="DBSYSModelStoreContainer">
     <EntitySet Name="Movies" EntityType="Self.Movies" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalesDetails" EntityType="Self.SalesDetails" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SalesMaster" EntityType="Self.SalesMaster" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserAccount" EntityType="Self.UserAccount" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="SalesDetails" EntityType="Self.SalesDetails" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-[SalesDetails].[TicketNo] AS [TicketNo], 
-[SalesDetails].[Movie] AS [Movie], 
-[SalesDetails].[Quantity] AS [Quantity], 
-[SalesDetails].[Price] AS [Price], 
-[SalesDetails].[TotalAmount] AS [TotalAmount]
-FROM [dbo].[SalesDetails] AS [SalesDetails]</DefiningQuery>
-    </EntitySet>
     <EntitySet Name="Ticket" EntityType="Self.Ticket" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
 [Ticket].[TicketNo] AS [TicketNo], 

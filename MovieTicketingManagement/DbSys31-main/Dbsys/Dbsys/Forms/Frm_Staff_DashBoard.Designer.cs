@@ -35,6 +35,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnUser = new System.Windows.Forms.Button();
+            this.btnAddMovies = new System.Windows.Forms.Button();
+            this.btnTotalSales = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -112,18 +115,58 @@
     "________________________________________________________________________________" +
     "_______________________________";
             // 
+            // btnUser
+            // 
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.Location = new System.Drawing.Point(600, 486);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(335, 59);
+            this.btnUser.TabIndex = 93;
+            this.btnUser.Text = "USER";
+            this.btnUser.UseVisualStyleBackColor = true;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            // 
+            // btnAddMovies
+            // 
+            this.btnAddMovies.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAddMovies.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMovies.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddMovies.Location = new System.Drawing.Point(600, 384);
+            this.btnAddMovies.Name = "btnAddMovies";
+            this.btnAddMovies.Size = new System.Drawing.Size(335, 60);
+            this.btnAddMovies.TabIndex = 92;
+            this.btnAddMovies.Text = "ADD MOVIES";
+            this.btnAddMovies.UseVisualStyleBackColor = true;
+            this.btnAddMovies.Click += new System.EventHandler(this.btnAddMovies_Click);
+            // 
+            // btnTotalSales
+            // 
+            this.btnTotalSales.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnTotalSales.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTotalSales.Location = new System.Drawing.Point(600, 287);
+            this.btnTotalSales.Name = "btnTotalSales";
+            this.btnTotalSales.Size = new System.Drawing.Size(335, 60);
+            this.btnTotalSales.TabIndex = 91;
+            this.btnTotalSales.Text = "TOTAL SALES";
+            this.btnTotalSales.UseVisualStyleBackColor = true;
+            this.btnTotalSales.Click += new System.EventHandler(this.btnTotalSales_Click);
+            // 
             // Frm_Staff_DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1534, 833);
+            this.Controls.Add(this.btnUser);
+            this.Controls.Add(this.btnAddMovies);
+            this.Controls.Add(this.btnTotalSales);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_Staff_DashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_Teacher_DashBoard";
+            this.Text = "Frm_Staff_DashBoard";
             this.Load += new System.EventHandler(this.Frm_Teacher_DashBoard_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -141,5 +184,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnUser;
+        private System.Windows.Forms.Button btnAddMovies;
+        private System.Windows.Forms.Button btnTotalSales;
     }
 }

@@ -64,7 +64,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Frm_Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_Home";
+            this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

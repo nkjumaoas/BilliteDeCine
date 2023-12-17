@@ -20,6 +20,7 @@ namespace Dbsys.Forms
 
         private static List<object[]> rowDataList = new List<object[]>();
 
+        public Receipt rec;
         public Frm_Admin_Purchase()
         {
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace Dbsys.Forms
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Frm_Customer_Dashboard cd = new Frm_Customer_Dashboard();
+            Frm_Admin_AvailableMovies cd = new Frm_Admin_AvailableMovies();
             cd.Show();
             this.Hide();
         }
@@ -228,9 +229,12 @@ namespace Dbsys.Forms
                 }
                 if (newSalesMaster != null)
                 {
-                    Receipt r = new Receipt(newSalesMaster.TicketNo.ToString(),lblMovieTitle.Text,lblShowDate.Text,nupQuantity.Value.ToString(),lblTotalSales.Text);
-
-                    r.Show();
+                    //Receipt r = new Receipt(newSalesMaster.TicketNo.ToString(),lblMovieTitle.Text,lblShowDate.Text,nupQuantity.Value.ToString(),lblTotalSales.Text);
+                    //r.Show();
+                    rec = new Receipt(this);
+                    rec.FormClosed += Receipt_FormClosed;
+                    rec.setValues(newSalesMaster.TicketNo.ToString(), lblMovieTitle.Text, lblShowDate.Text, nupQuantity.Value.ToString(), lblTotalSales.Text);
+                    rec.Show();
                 }
 
             }
@@ -239,10 +243,17 @@ namespace Dbsys.Forms
                 MessageBox.Show(ex.Message);
             }
         }
+        private void Receipt_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Frm_Admin_AvailableMovies m = new Frm_Admin_AvailableMovies();
+            m.Show();
+            rec.Hide();
+            MessageBox.Show("Thank you for purchasing!.", "Billete de Cine", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+        }
 
         private void pictureBox6_Click_1(object sender, EventArgs e)
         {
-            Frm_Admin_Availability c = new Frm_Admin_Availability();
+            Frm_Admin_AvailableMovies c = new Frm_Admin_AvailableMovies();
             c.Show();
             this.Hide();
         }
