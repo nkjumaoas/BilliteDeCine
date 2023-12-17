@@ -70,11 +70,11 @@ namespace Dbsys.Forms
                 {
                     var newTicket = new Ticket
                     {
-                        newTicket.TicketNo = ticketNumber,
-                        newTicket.MovieTitle = movieTitle,
-                        newTicket.ShowingDate = showingDate,
-                        newTicket.Quantity = ticketQuantity,
-                        newTicket.TotalAmount = ticketTotalAmount
+                        TicketNo = ticketNumber,
+                        MovieTitle = movieTitle,
+                        ShowingDate = showingDate,
+                        Quantity = ticketQuantity,
+                        TotalAmount = ticketTotalAmount
                     };
 
                     db.Ticket.Add(newTicket);
