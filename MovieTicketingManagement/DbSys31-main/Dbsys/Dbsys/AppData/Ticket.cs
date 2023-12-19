@@ -18,15 +18,9 @@ using System;
 public partial class Ticket
 {
 
-    public int TicketNo { get; set; }
+    public int ticketNo { get; set; }
 
-    public string MovieTitle { get; set; }
-
-    public Nullable<System.DateTime> ShowingDate { get; set; }
-
-    public Nullable<int> Quantity { get; set; }
-
-    public Nullable<decimal> TotalAmount { get; set; }
+    public Nullable<int> soldTickets { get; set; }
 
 }
 

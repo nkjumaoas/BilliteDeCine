@@ -40,7 +40,6 @@
       <Parameter Name="Quantity" Mode="In" Type="Int32" />
       <Parameter Name="TotalSales" Mode="In" Type="Int64" />
     </FunctionImport>
-    <EntitySet Name="Ticket" EntityType="DBSYSModel.Ticket" />
     <EntitySet Name="SalesMaster" EntityType="DBSYSModel.SalesMaster" />
     <FunctionImport Name="InsertSalesDetails">
       <Parameter Name="Movie" Mode="In" Type="Int32" />
@@ -51,6 +50,7 @@
     </FunctionImport>
     <EntitySet Name="Movies" EntityType="DBSYSModel.Movies" />
     <EntitySet Name="SalesDetails" EntityType="DBSYSModel.SalesDetails" />
+    <EntitySet Name="Ticket" EntityType="DBSYSModel.Ticket" />
   </EntityContainer>
   <EntityType Name="Role">
     <Key>
@@ -82,16 +82,6 @@
     <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="Ticket">
-    <Key>
-      <PropertyRef Name="TicketNo" />
-    </Key>
-    <Property Name="TicketNo" Type="Int32" Nullable="false" />
-    <Property Name="MovieTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="ShowingDate" Type="DateTime" Precision="3" />
-    <Property Name="Quantity" Type="Int32" />
-    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
-  </EntityType>
   <EntityType Name="SalesMaster">
     <Key>
       <PropertyRef Name="TicketNo" />
@@ -119,5 +109,12 @@
     <Property Name="Quantity" Type="Int32" />
     <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
     <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Ticket">
+    <Key>
+      <PropertyRef Name="ticketNo" />
+    </Key>
+    <Property Name="ticketNo" Type="Int32" Nullable="false" />
+    <Property Name="soldTickets" Type="Int32" />
   </EntityType>
 </Schema>

@@ -45,13 +45,10 @@
 warning 6002: The table/view 'DBSYS.dbo.Ticket' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Ticket">
           <Key>
-            <PropertyRef Name="TicketNo" />
+            <PropertyRef Name="ticketNo" />
           </Key>
-          <Property Name="TicketNo" Type="int" Nullable="false" />
-          <Property Name="MovieTitle" Type="varchar" MaxLength="50" />
-          <Property Name="ShowingDate" Type="datetime" />
-          <Property Name="Quantity" Type="int" />
-          <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="ticketNo" Type="int" Nullable="false" />
+          <Property Name="soldTickets" Type="int" />
         </EntityType>
         <EntityType Name="UserAccount">
           <Key>
@@ -112,11 +109,8 @@ warning 6002: The table/view 'DBSYS.dbo.vw_all_user_role' does not have a primar
           <EntitySet Name="UserAccount" EntityType="Self.UserAccount" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ticket" EntityType="Self.Ticket" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-[Ticket].[TicketNo] AS [TicketNo], 
-[Ticket].[MovieTitle] AS [MovieTitle], 
-[Ticket].[ShowingDate] AS [ShowingDate], 
-[Ticket].[Quantity] AS [Quantity], 
-[Ticket].[TotalAmount] AS [TotalAmount]
+[Ticket].[ticketNo] AS [ticketNo], 
+[Ticket].[soldTickets] AS [soldTickets]
 FROM [dbo].[Ticket] AS [Ticket]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_all_user_role" EntityType="Self.vw_all_user_role" store:Type="Views" store:Schema="dbo">
@@ -172,7 +166,6 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
             <Parameter Name="Quantity" Mode="In" Type="Int32" />
             <Parameter Name="TotalSales" Mode="In" Type="Int64" />
           </FunctionImport>
-          <EntitySet Name="Ticket" EntityType="DBSYSModel.Ticket" />
           <EntitySet Name="SalesMaster" EntityType="DBSYSModel.SalesMaster" />
           <FunctionImport Name="InsertSalesDetails">
             <Parameter Name="Movie" Mode="In" Type="Int32" />
@@ -183,6 +176,7 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
           </FunctionImport>
           <EntitySet Name="Movies" EntityType="DBSYSModel.Movies" />
           <EntitySet Name="SalesDetails" EntityType="DBSYSModel.SalesDetails" />
+          <EntitySet Name="Ticket" EntityType="DBSYSModel.Ticket" />
           </EntityContainer>
         <EntityType Name="Role">
           <Key>
@@ -214,16 +208,6 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
           <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="Ticket">
-          <Key>
-            <PropertyRef Name="TicketNo" />
-          </Key>
-          <Property Name="TicketNo" Type="Int32" Nullable="false" />
-          <Property Name="MovieTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ShowingDate" Type="DateTime" Precision="3" />
-          <Property Name="Quantity" Type="Int32" />
-          <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
-        </EntityType>
         <EntityType Name="SalesMaster">
           <Key>
             <PropertyRef Name="TicketNo" />
@@ -251,6 +235,13 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
           <Property Name="Quantity" Type="Int32" />
           <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="ticketNo" />
+          </Key>
+          <Property Name="ticketNo" Type="Int32" Nullable="false" />
+          <Property Name="soldTickets" Type="Int32" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -292,17 +283,6 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
           <FunctionImportMapping FunctionImportName="InsertUserInformation" FunctionName="DBSYSModel.Store.InsertUserInformation" />
           <FunctionImportMapping FunctionImportName="vw_user_information" FunctionName="DBSYSModel.Store.vw_user_information" />
           <FunctionImportMapping FunctionImportName="vw_userinformation" FunctionName="DBSYSModel.Store.vw_user_information" />
-          <EntitySetMapping Name="Ticket">
-            <EntityTypeMapping TypeName="DBSYSModel.Ticket">
-              <MappingFragment StoreEntitySet="Ticket">
-                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-                <ScalarProperty Name="ShowingDate" ColumnName="ShowingDate" />
-                <ScalarProperty Name="MovieTitle" ColumnName="MovieTitle" />
-                <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="SalesMaster">
             <EntityTypeMapping TypeName="DBSYSModel.SalesMaster">
               <MappingFragment StoreEntitySet="SalesMaster">
@@ -332,6 +312,14 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="Movie" ColumnName="Movie" />
                 <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ticket">
+            <EntityTypeMapping TypeName="DBSYSModel.Ticket">
+              <MappingFragment StoreEntitySet="Ticket">
+                <ScalarProperty Name="soldTickets" ColumnName="soldTickets" />
+                <ScalarProperty Name="ticketNo" ColumnName="ticketNo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

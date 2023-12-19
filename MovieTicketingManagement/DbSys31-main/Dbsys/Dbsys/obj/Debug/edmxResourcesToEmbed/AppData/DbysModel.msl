@@ -35,17 +35,6 @@
     <FunctionImportMapping FunctionImportName="InsertUserInformation" FunctionName="DBSYSModel.Store.InsertUserInformation" />
     <FunctionImportMapping FunctionImportName="vw_user_information" FunctionName="DBSYSModel.Store.vw_user_information" />
     <FunctionImportMapping FunctionImportName="vw_userinformation" FunctionName="DBSYSModel.Store.vw_user_information" />
-    <EntitySetMapping Name="Ticket">
-      <EntityTypeMapping TypeName="DBSYSModel.Ticket">
-        <MappingFragment StoreEntitySet="Ticket">
-          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
-          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-          <ScalarProperty Name="ShowingDate" ColumnName="ShowingDate" />
-          <ScalarProperty Name="MovieTitle" ColumnName="MovieTitle" />
-          <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="SalesMaster">
       <EntityTypeMapping TypeName="DBSYSModel.SalesMaster">
         <MappingFragment StoreEntitySet="SalesMaster">
@@ -75,6 +64,14 @@
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
           <ScalarProperty Name="Movie" ColumnName="Movie" />
           <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ticket">
+      <EntityTypeMapping TypeName="DBSYSModel.Ticket">
+        <MappingFragment StoreEntitySet="Ticket">
+          <ScalarProperty Name="soldTickets" ColumnName="soldTickets" />
+          <ScalarProperty Name="ticketNo" ColumnName="ticketNo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

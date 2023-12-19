@@ -69,5 +69,13 @@ namespace Dbsys.Forms
             cbUser.Text = UserLogged.GetInstance().UserAccount.userName;
             
         }
+
+        private void btnTickets_Click(object sender, EventArgs e)
+        {
+            Frm_Admin_Tickets a = new Frm_Admin_Tickets();
+            a.Show();
+            this.Hide();
+
+        }
     }
 }

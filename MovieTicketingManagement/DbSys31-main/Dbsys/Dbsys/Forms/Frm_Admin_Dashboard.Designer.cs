@@ -39,6 +39,7 @@
             this.btnTotalSales = new System.Windows.Forms.Button();
             this.btnMovies = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnTickets = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -121,7 +122,7 @@
             this.btnAvailableMovie.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAvailableMovie.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAvailableMovie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAvailableMovie.Location = new System.Drawing.Point(597, 438);
+            this.btnAvailableMovie.Location = new System.Drawing.Point(597, 523);
             this.btnAvailableMovie.Name = "btnAvailableMovie";
             this.btnAvailableMovie.Size = new System.Drawing.Size(335, 60);
             this.btnAvailableMovie.TabIndex = 88;
@@ -133,7 +134,7 @@
             // 
             this.btnTotalSales.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnTotalSales.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTotalSales.Location = new System.Drawing.Point(597, 341);
+            this.btnTotalSales.Location = new System.Drawing.Point(597, 426);
             this.btnTotalSales.Name = "btnTotalSales";
             this.btnTotalSales.Size = new System.Drawing.Size(335, 60);
             this.btnTotalSales.TabIndex = 87;
@@ -157,7 +158,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(597, 540);
+            this.button1.Location = new System.Drawing.Point(597, 625);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(335, 59);
             this.button1.TabIndex = 90;
@@ -165,12 +166,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnTickets
+            // 
+            this.btnTickets.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnTickets.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTickets.Location = new System.Drawing.Point(597, 329);
+            this.btnTickets.Name = "btnTickets";
+            this.btnTickets.Size = new System.Drawing.Size(335, 58);
+            this.btnTickets.TabIndex = 91;
+            this.btnTickets.Text = "TICKETS";
+            this.btnTickets.UseVisualStyleBackColor = true;
+            this.btnTickets.Click += new System.EventHandler(this.btnTickets_Click);
+            // 
             // Frm_Admin_DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1534, 833);
+            this.Controls.Add(this.btnTickets);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnMovies);
             this.Controls.Add(this.btnAvailableMovie);
@@ -201,5 +215,6 @@
         private System.Windows.Forms.Button btnMovies;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cbUser;
+        private System.Windows.Forms.Button btnTickets;
     }
 }

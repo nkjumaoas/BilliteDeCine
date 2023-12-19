@@ -40,13 +40,10 @@
 warning 6002: The table/view 'DBSYS.dbo.Ticket' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Ticket">
     <Key>
-      <PropertyRef Name="TicketNo" />
+      <PropertyRef Name="ticketNo" />
     </Key>
-    <Property Name="TicketNo" Type="int" Nullable="false" />
-    <Property Name="MovieTitle" Type="varchar" MaxLength="50" />
-    <Property Name="ShowingDate" Type="datetime" />
-    <Property Name="Quantity" Type="int" />
-    <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ticketNo" Type="int" Nullable="false" />
+    <Property Name="soldTickets" Type="int" />
   </EntityType>
   <EntityType Name="UserAccount">
     <Key>
@@ -107,11 +104,8 @@ warning 6002: The table/view 'DBSYS.dbo.vw_all_user_role' does not have a primar
     <EntitySet Name="UserAccount" EntityType="Self.UserAccount" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ticket" EntityType="Self.Ticket" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-[Ticket].[TicketNo] AS [TicketNo], 
-[Ticket].[MovieTitle] AS [MovieTitle], 
-[Ticket].[ShowingDate] AS [ShowingDate], 
-[Ticket].[Quantity] AS [Quantity], 
-[Ticket].[TotalAmount] AS [TotalAmount]
+[Ticket].[ticketNo] AS [ticketNo], 
+[Ticket].[soldTickets] AS [soldTickets]
 FROM [dbo].[Ticket] AS [Ticket]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="vw_all_user_role" EntityType="Self.vw_all_user_role" store:Type="Views" store:Schema="dbo">

@@ -16,22 +16,6 @@ namespace Dbsys.Forms
     public partial class Receipt : Form
     {
         private Form Purchase;
-        //public Receipt(string ticketNo, string movieTitle, string showdate, string quantity, string totalAmount, Form Purchase)
-        //{
-        //    InitializeComponent();
-
-        //    // Set values in the constructor
-        //    lblticketno.Text = ticketNo;
-        //    lblmovietitle.Text = movieTitle;
-        //    lblShowingDate.Text = showdate;
-        //    lblQuantity.Text = quantity;
-        //    lblTotalAmount.Text = totalAmount;
-
-        //    this.Purchase = Purchase;
-        //    Purchase.Hide();
-
-
-        //}
         public Receipt(Form Purchase)
         {
             InitializeComponent();
@@ -51,46 +35,33 @@ namespace Dbsys.Forms
             lblTotalAmount.Text = totalAmount;
 
             // Save values to the database
-            SaveToTicketTable();
+            SaveToDatabase(ticketNo, quantity);
 
         }
-        private void SaveToTicketTable()
+
+        private void SaveToDatabase(string ticketNo, string quantity)
         {
             try
             {
-                // Convert necessary values to appropriate types
-                int ticketNumber = Convert.ToInt32(lblticketno.Text);
-                string movieTitle = lblmovietitle.Text;
-                DateTime showingDate = Convert.ToDateTime(lblShowingDate.Text);
-                int ticketQuantity = Convert.ToInt32(lblQuantity.Text);
-                decimal ticketTotalAmount = Convert.ToDecimal(lblTotalAmount.Text);
-
-                // Save to the database
                 using (var db = new DBSYSEntities())
                 {
-                    var newTicket = new Ticket
+                    // Convert the quantity string to an int
+                    if (!int.TryParse(quantity, out int parsedQuantity))
                     {
-                        TicketNo = ticketNumber,
-                        MovieTitle = movieTitle,
-                        ShowingDate = showingDate,
-                        Quantity = ticketQuantity,
-                        TotalAmount = ticketTotalAmount
-                    };
+                        MessageBox.Show("Invalid quantity format. Please enter a valid number.");
+                        return;
+                    }
 
-                    db.Ticket.Add(newTicket);
-                    int result = db.SaveChanges();
-                    Console.WriteLine("Number of changes saved: " + result);
+                    // Execute raw SQL insert statement
+                    string sql = $"INSERT INTO Ticket (ticketNo, soldTickets) VALUES ({int.Parse(ticketNo)}, {parsedQuantity})";
+                    db.Database.ExecuteSqlCommand(sql);
                 }
             }
             catch (Exception ex)
             {
-                // Handle exceptions
-                Console.WriteLine("Error saving to Ticket table: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
-
-
-
         private void Receipt_Load(object sender, EventArgs e)
         {
             
