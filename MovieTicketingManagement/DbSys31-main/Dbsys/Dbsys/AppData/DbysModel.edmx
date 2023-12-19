@@ -62,6 +62,19 @@ warning 6002: The table/view 'DBSYS.dbo.Ticket' does not have a primary key defi
           <Property Name="createdBy" Type="varchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
+warning 6002: The table/view 'DBSYS.dbo.vw_all_ticket' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_all_ticket">
+          <Key>
+            <PropertyRef Name="TicketNo" />
+          </Key>
+          <Property Name="TicketNo" Type="int" Nullable="false" />
+          <Property Name="Movie" Type="int" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="DateSale" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
 warning 6002: The table/view 'DBSYS.dbo.vw_all_user_role' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="vw_all_user_role">
           <Key>
@@ -112,6 +125,16 @@ warning 6002: The table/view 'DBSYS.dbo.vw_all_user_role' does not have a primar
 [Ticket].[ticketNo] AS [ticketNo], 
 [Ticket].[soldTickets] AS [soldTickets]
 FROM [dbo].[Ticket] AS [Ticket]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_all_ticket" EntityType="Self.vw_all_ticket" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[vw_all_ticket].[TicketNo] AS [TicketNo], 
+[vw_all_ticket].[Movie] AS [Movie], 
+[vw_all_ticket].[Quantity] AS [Quantity], 
+[vw_all_ticket].[Price] AS [Price], 
+[vw_all_ticket].[TotalAmount] AS [TotalAmount], 
+[vw_all_ticket].[DateSale] AS [DateSale]
+FROM [dbo].[vw_all_ticket] AS [vw_all_ticket]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_all_user_role" EntityType="Self.vw_all_user_role" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -177,6 +200,7 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
           <EntitySet Name="Movies" EntityType="DBSYSModel.Movies" />
           <EntitySet Name="SalesDetails" EntityType="DBSYSModel.SalesDetails" />
           <EntitySet Name="Ticket" EntityType="DBSYSModel.Ticket" />
+          <EntitySet Name="vw_all_ticket" EntityType="DBSYSModel.vw_all_ticket" />
           </EntityContainer>
         <EntityType Name="Role">
           <Key>
@@ -242,6 +266,17 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
           </Key>
           <Property Name="ticketNo" Type="Int32" Nullable="false" />
           <Property Name="soldTickets" Type="Int32" />
+        </EntityType>
+        <EntityType Name="vw_all_ticket">
+          <Key>
+            <PropertyRef Name="TicketNo" />
+          </Key>
+          <Property Name="TicketNo" Type="Int32" Nullable="false" />
+          <Property Name="Movie" Type="Int32" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="DateSale" Type="DateTime" Precision="3" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -320,6 +355,18 @@ FROM [dbo].[vw_all_user_role] AS [vw_all_user_role]</DefiningQuery>
               <MappingFragment StoreEntitySet="Ticket">
                 <ScalarProperty Name="soldTickets" ColumnName="soldTickets" />
                 <ScalarProperty Name="ticketNo" ColumnName="ticketNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_all_ticket">
+            <EntityTypeMapping TypeName="DBSYSModel.vw_all_ticket">
+              <MappingFragment StoreEntitySet="vw_all_ticket">
+                <ScalarProperty Name="DateSale" ColumnName="DateSale" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Movie" ColumnName="Movie" />
+                <ScalarProperty Name="TicketNo" ColumnName="TicketNo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -50,6 +50,8 @@ public partial class DBSYSEntities : DbContext
 
     public DbSet<Ticket> Ticket { get; set; }
 
+    public DbSet<vw_all_ticket> vw_all_ticket { get; set; }
+
 
     public virtual int sp_newUser(string username, string password, Nullable<int> roleId, Nullable<int> createdBy)
     {

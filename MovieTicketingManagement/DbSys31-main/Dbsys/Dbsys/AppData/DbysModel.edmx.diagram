@@ -12,6 +12,7 @@
         <EntityTypeShape EntityType="DBSYSModel.Movies" Width="1.5" PointX="3.375" PointY="0.75" />
         <EntityTypeShape EntityType="DBSYSModel.SalesDetails" Width="1.5" PointX="0.75" PointY="6.75" />
         <EntityTypeShape EntityType="DBSYSModel.Ticket" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DBSYSModel.vw_all_ticket" Width="1.5" PointX="7.375" PointY="0.75" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -51,6 +51,7 @@
     <EntitySet Name="Movies" EntityType="DBSYSModel.Movies" />
     <EntitySet Name="SalesDetails" EntityType="DBSYSModel.SalesDetails" />
     <EntitySet Name="Ticket" EntityType="DBSYSModel.Ticket" />
+    <EntitySet Name="vw_all_ticket" EntityType="DBSYSModel.vw_all_ticket" />
   </EntityContainer>
   <EntityType Name="Role">
     <Key>
@@ -116,5 +117,16 @@
     </Key>
     <Property Name="ticketNo" Type="Int32" Nullable="false" />
     <Property Name="soldTickets" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vw_all_ticket">
+    <Key>
+      <PropertyRef Name="TicketNo" />
+    </Key>
+    <Property Name="TicketNo" Type="Int32" Nullable="false" />
+    <Property Name="Movie" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DateSale" Type="DateTime" Precision="3" />
   </EntityType>
 </Schema>
