@@ -309,6 +309,7 @@
             this.ClientSize = new System.Drawing.Size(1534, 833);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

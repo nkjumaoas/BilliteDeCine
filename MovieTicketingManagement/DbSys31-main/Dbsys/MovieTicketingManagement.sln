@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieTicketingManagement", 
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupMovieTicketingManagement", "SetupMovieTicketingManagement\SetupMovieTicketingManagement.vdproj", "{EA2788BD-D3A9-4685-B30B-B4E56B4A334B}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup2MovieticketingManagement", "Setup2MovieticketingManagement\Setup2MovieticketingManagement.vdproj", "{666C05DD-D524-4D88-AEA7-646DF76E06D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,8 @@ Global
 		{67732E9A-FD93-41AC-9424-2CA6B742498B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EA2788BD-D3A9-4685-B30B-B4E56B4A334B}.Debug|Any CPU.ActiveCfg = Debug
 		{EA2788BD-D3A9-4685-B30B-B4E56B4A334B}.Release|Any CPU.ActiveCfg = Release
+		{666C05DD-D524-4D88-AEA7-646DF76E06D0}.Debug|Any CPU.ActiveCfg = Debug
+		{666C05DD-D524-4D88-AEA7-646DF76E06D0}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

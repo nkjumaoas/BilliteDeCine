@@ -285,6 +285,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.pictureBox6);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_Admin_AvailableMovies";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

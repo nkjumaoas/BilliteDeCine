@@ -33,8 +33,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5466B131E6BEFF19B8CFF68D9680A320"
+        "MsmKey" = "8:_E96F7232DE0547858F094B3836A67346"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -47,6 +47,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_D3EA7EA29400B2C865DDFD41BF33DC9B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_5466B131E6BEFF19B8CFF68D9680A320"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -67,6 +73,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -83,6 +105,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -174,6 +212,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E96F7232DE0547858F094B3836A67346"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\..\\..\\..\\Downloads\\logo-removebg-preview.ico"
+            "TargetName" = "8:logo-removebg-preview.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_7A69ABD101014046BD90AF1D603150A6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -231,7 +289,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SetupMovieTicketingManagement"
         "ProductCode" = "8:{7BF938FC-9381-4E07-BAE9-B8EB3B3B74DF}"
-        "PackageCode" = "8:{749B0C30-05D9-4B30-9D66-8E8927206CDE}"
+        "PackageCode" = "8:{A16B1DCD-9BE0-41BE-BEA8-3B0ECEC1F3DE}"
         "UpgradeCode" = "8:{17C85334-2972-4BD6-8565-6611C6317C4A}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
@@ -351,9 +409,9 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DB368A78308147B2B94A4E2AAE852668"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_575FF3AB61C64E25B0A955FBFD113245"
             {
-            "Name" = "8:Billete De Cine"
+            "Name" = "8:BilleteDeCine"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
